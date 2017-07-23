@@ -1,0 +1,34 @@
+{
+  "name": "about",
+  "version": "1.0.0",
+  "description": "Personal website",
+  "author": "Simon Robin",
+  "keywords": [],
+  "main": "dist/index.html",
+  "scripts": {
+    "start": "npm run clean && concurrently -k \"npm run watch:html\" \"npm run watch:styles\" \"npm run server\" \"npm run livereload\"",
+    "build": "npm run clean && npm run build:html",
+    "build:html": "cp src/index.html dist/",
+    "watch:html": "watch \"npm run build:html -s\" src",
+    "build:styles": "node-sass --output-style compressed src/css/style.scss dist/css/style.css",
+    "watch:styles": "node-sass -w src/css/style.scss dist/css/style.css",
+    "clean": "rimraf dist && mkdirp dist",
+    "server": "http-server dist -o",
+    "livereload": "livereload dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simrobin/about.git"
+  },
+  "homepage": "https://simrobin.fr",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "http-server": "^0.10.0",
+    "livereload": "^0.6.2",
+    "mkdirp": "^0.5.1",
+    "node-sass": "^4.5.3",
+    "rimraf": "^2.6.1",
+    "watch": "^1.0.2"
+  }
+}
