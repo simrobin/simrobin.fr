@@ -1,3 +1,37 @@
+@import './vars';
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body {
-  background-color: #fff;
+  font-family: $font-family;
+  font-weight: $font-regular-weight;
+  font-size: .675rem;
+}
+
+header {
+  background-color: $gray;
+  width: 100%;
+  padding: 8em;
+  color: #fff;
+}
+
+.title {
+  text-align: center;
+}
+
+.title-name {
+  font-size: 3em;
+}
+
+.title-job {
+  font-size: 2em;
+  font-weight: $font-light-weight;
 }
