@@ -9,12 +9,12 @@
     "start": "npm run clean && concurrently -k \"npm run watch:html\" \"npm run watch:styles\" \"npm run server\" \"npm run livereload\"",
     "build": "npm run clean && npm run build:html",
     "build:html": "cp src/index.html dist/",
-    "watch:html": "watch \"npm run build:html -s\" src",
+    "watch:html": "watch --ignoreDirectoryPattern=/.*/ \"npm run build:html -s\" src",
     "build:styles": "node-sass --output-style compressed src/css/style.scss dist/css/style.css",
-    "watch:styles": "node-sass -w src/css/style.scss dist/css/style.css",
+    "watch:styles": "npm run build:styles && node-sass -w src/css/style.scss dist/css/style.css",
     "clean": "rimraf dist && mkdirp dist",
-    "server": "http-server dist -o",
-    "livereload": "livereload dist"
+    "server": "http-server dist -o -c-1",
+    "livereload": "livereload dist -e css"
   },
   "repository": {
     "type": "git",
