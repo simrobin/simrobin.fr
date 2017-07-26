@@ -4,21 +4,89 @@
     <title></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header>
+      <i class="sr-logo"></i>
       <h1 class="title">
         <div class="title-name">Simon Robin</div>
-        <div class="title-job">Développeur Front-End</div>
+        <div class="title-job">Développeur Front&#8209;End</div>
       </h1>
+      <div class="contact">
+        <a href="mailto:simon.robin.info@gmail.com">
+          <i class="sr-mail"></i> Message
+        </a>
+        <a href="https://twitter.com/SaymonRobin">
+          <i class="sr-twitter"></i> Twitter
+        </a>
+        <a href="https://github.com/simrobin">
+          <i class="sr-github"></i> Github
+        </a>
+      </div>
     </header>
 
-    <main></main>
+    <main>
+      <section class="about-section">
+        <h2 class="section-title">À propos de moi</h2>
 
-    <footer></footer>
+        <p class="about-me">
+          Passionné de développement, j’aime découvrir et construire des applications web qui facilitent le quotidien des utilisateurs. <br>
+          Toujours à l'affût des nouveautés sur les technologies du web, je profite de la communauté open source pour me maintenir à jour. <br>
+          Faire partie d'une équipe réunie autour de projets communs me permet d’améliorer continuellement mes compétences et mon travail.
+        </p>
+
+        <ul class="about-skills">
+          <li>
+            <strong>Web</strong> : HTML, CSS, JavaScript, Angular(JS), React
+          </li>
+          <li>
+            <strong>Backend</strong> : Goland, Node.js, SQL, PHP
+          </li>
+          <li>
+            <strong>Devops</strong> : Docker, Kubernetes, Bash, Jenkins, Travis
+          </li>
+          <li>
+            <strong>Langues</strong> : Anglais (courant), Allemand (scolaire)
+          </li>
+        </ul>
+      </section>
+
+      <section class="experiences-section">
+        <h2 class="section-title">Expériences</h2>
+
+        <div class="experiences">
+          <div class="experience">
+            <div class="experience-date">2012 <i class="sr-arrow"></i> Aujourd'hui</div>
+            <div class="experience-title">Développeur web</div>
+            <div class="experience-location">Oodrive | Paris</div>
+            <ul class="experience-missions">
+              <li>Développement d’applications pour la gestion de certificats personnels</li>
+              <li>Intégration des sites web de l’entreprise</li>
+              <li>Automatisation de la personnalisation client des applications de partage</li>
+            </ul>
+          </div>
+          <div class="experience">
+            <div class="experience-date">2010 <i class="sr-arrow"></i> 2012</div>
+          </div>
+          <div class="experience">
+            <div class="experience-date">2009 <i class="sr-arrow"></i> 2010</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="education-section">
+        <h2 class="section-title">Formations</h2>
+      </section>
+
+      <section class="interest-section">
+        <h2 class="section-title">Centres d'intérêts</h2>
+      </section>
+    </main>
+
+    <footer>© 2017 Simon Robin</footer>
 
     <script>
       document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>');

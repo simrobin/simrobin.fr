@@ -1,3 +1,4 @@
+@import './webfont';
 @import './vars';
 
 html {
@@ -16,22 +17,199 @@ body {
   font-size: .675rem;
 }
 
+strong {
+  font-weight: $font-bold-weight;
+}
+
+.yellow {
+  color: $yellow;
+}
+
 header {
   background-color: $gray;
   width: 100%;
-  padding: 8em;
+  padding: 16% 8%;
   color: #fff;
+  text-align: center;
+
+  & > .sr-logo {
+    font-size: 6em;
+  }
 }
 
 .title {
-  text-align: center;
+  margin-top: 3em;
+}
+
+.title-name,
+.title-job {
+  text-transform: uppercase;
 }
 
 .title-name {
-  font-size: 3em;
+  font-size: 3.5em;
+  text-transform: uppercase;
+  font-weight: $font-bold-weight;
 }
 
 .title-job {
-  font-size: 2em;
+  margin-top: .5em;
+  font-size: 3em;
   font-weight: $font-light-weight;
+}
+
+.contact {
+  margin-top: 4em;
+  & > a {
+    display: inline-block;
+    text-align: center;
+    font-size: 1.6em;
+    color: #fff;
+    text-decoration: none;
+
+    & > i {
+      color: $yellow;
+      margin-right: .4em;
+    }
+
+    & + a {
+      margin-left: 6%;
+    }
+  }
+}
+
+.section-title {
+  font-size: 2em;
+  text-transform: uppercase;
+
+  &:before {
+    @extend .icon;
+    content: "\e901";
+    margin-right: .5em;
+    color: $yellow;
+  }
+}
+
+.about-section,
+.experiences-section,
+.education-section,
+.interest-section {
+  padding: 8%;
+}
+
+.about-me,
+.about-skills {
+  font-size: 1.4em;
+  margin-top: 4em;
+}
+
+.about-me {
+  line-height: 1.4em;
+}
+
+.about-skills {
+  & > li {
+    & + li {
+      margin-top: .5em;
+    }
+  }
+}
+
+.experiences-section,
+.interest-section {
+  background-color: $light-gray;
+
+  & > .section-title {
+    text-align: center;
+  }
+}
+
+.experiences {
+  margin-top: 2em;
+}
+
+.experience {
+  padding: 0 1.5em 1em;
+  position: relative;
+  border-left-style: solid;
+  border-left-width: .5em;
+  border-color: $yellow;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -1.15em;
+    width: 1.75em;
+    height: 1.75em;
+    border-radius: 100%;
+    background-color: $yellow;
+    border: solid .4em $light-gray;
+  }
+}
+
+@media (max-width:767px) {
+  .experience {
+    border-left-style: solid;
+    border-left-width: .5em;
+  }
+}
+
+@media (min-width:767px) {
+  .experiences {
+    display: flex;
+  }
+
+  .experience {
+    flex-basis: (100% / 3);
+    padding: 1em .75em;
+    border-left-style: none;
+    border-left-width: 0;
+    border-top-style: solid;
+    border-top-width: .5em;
+    border-color: $yellow;
+
+    &:before {
+      top: -1.15em;
+      left: 0;
+    }
+  }
+}
+
+.experience-date {
+  display: inline-block;
+  padding: .75em 1em;
+  background-color: $yellow;
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+.experience-title {
+  margin-top: 1.5em;
+  font-size: 1.4em;
+  text-transform: uppercase;
+}
+
+.experience-location {
+  margin-top: .5em;
+  font-size: 1.4em;
+  font-weight: $font-light-weight;
+}
+
+.experience-missions {
+  margin-top: 1.5em;
+  font-size: 1.2em;
+  line-height: 1.2em;
+
+  & > li + li {
+    margin-top: .5em;
+  }
+}
+
+footer {
+  padding: 6% 8%;
+  font-size: 1.2em;
+  border-bottom: solid 1em $yellow;
+  text-align: center;
 }

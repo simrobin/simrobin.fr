@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'SimonRobin';
+  src:  url('../fonts/SimonRobin.eot?n43yys');
+  src:  url('../fonts/SimonRobin.eot?n43yys#iefix') format('embedded-opentype'),
+    url('../fonts/SimonRobin.ttf?n43yys') format('truetype'),
+    url('../fonts/SimonRobin.woff?n43yys') format('woff'),
+    url('../fonts/SimonRobin.svg?n43yys#SimonRobin') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+i,
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'SimonRobin' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.sr-roller:before {
+  content: "\e900";
+}
+.sr-arrow:before {
+  content: "\e901";
+}
+.sr-book:before {
+  content: "\e902";
+}
+.sr-cooking:before {
+  content: "\e903";
+}
+.sr-file:before {
+  content: "\e904";
+}
+.sr-github:before {
+  content: "\e905";
+}
+.sr-linkedin:before {
+  content: "\e906";
+}
+.sr-logo:before {
+  content: "\e907";
+}
+.sr-mail:before {
+  content: "\e908";
+}
+.sr-map:before {
+  content: "\e909";
+}
+.sr-music:before {
+  content: "\e90a";
+}
+.sr-quote:before {
+  content: "\e90b";
+}
+.sr-school:before {
+  content: "\e90c";
+}
+.sr-tennis:before {
+  content: "\e90d";
+}
+.sr-twitter:before {
+  content: "\e90e";
+}
+.sr-volleyball:before {
+  content: "\e90f";
+}
