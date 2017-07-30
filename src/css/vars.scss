@@ -1,3 +1,12 @@
+$mobile-max-width: 320px;
+$tablet-min-width: ($mobile-max-width + 1);
+$tablet-max-width: 767px;
+$laptop-min-width: ($tablet-max-width + 1);
+$laptop-max-width: 1024px;
+$desktop-min-width: ($laptop-max-width + 1);
+$desktop-max-width: 1280px;
+$large-desktop-min-width: ($desktop-max-width + 1);
+
 $font-family: 'Montserrat', sans-serif;
 $font-light-weight: 300;
 $font-regular-weight: 400;

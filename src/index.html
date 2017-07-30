@@ -3,7 +3,7 @@
   <head>
     <title></title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -30,59 +30,107 @@
 
     <main>
       <section class="about-section">
-        <h2 class="section-title">À propos de moi</h2>
+        <div class="section-wrapper">
+          <h2 class="section-title">À propos de moi</h2>
 
-        <p class="about-me">
-          Passionné de développement, j’aime découvrir et construire des applications web qui facilitent le quotidien des utilisateurs. <br>
-          Toujours à l'affût des nouveautés sur les technologies du web, je profite de la communauté open source pour me maintenir à jour. <br>
-          Faire partie d'une équipe réunie autour de projets communs me permet d’améliorer continuellement mes compétences et mon travail.
-        </p>
+          <p class="about-me">
+            Passionné de développement, j’aime découvrir et construire des applications web qui facilitent le quotidien des utilisateurs. <br>
+            Je profite de la communauté open source et du travail en équipe atour de projets communs pour maintenir mes connaissances à jour au quotidien.
+          </p>
 
-        <ul class="about-skills">
-          <li>
-            <strong>Web</strong> : HTML, CSS, JavaScript, Angular(JS), React
-          </li>
-          <li>
-            <strong>Backend</strong> : Goland, Node.js, SQL, PHP
-          </li>
-          <li>
-            <strong>Devops</strong> : Docker, Kubernetes, Bash, Jenkins, Travis
-          </li>
-          <li>
-            <strong>Langues</strong> : Anglais (courant), Allemand (scolaire)
-          </li>
-        </ul>
+          <ul class="about-skills">
+            <li>
+              <strong>Web</strong> : HTML, CSS, JavaScript, Angular(JS), React
+            </li>
+            <li>
+              <strong>Backend</strong> : Goland, Node.js, SQL, PHP
+            </li>
+            <li>
+              <strong>Devops</strong> : Docker, Kubernetes, Bash, Jenkins, Travis
+            </li>
+            <li>
+              <strong>Langues</strong> : Anglais (courant), Allemand (scolaire)
+            </li>
+          </ul>
+        </div>
       </section>
 
       <section class="experiences-section">
-        <h2 class="section-title">Expériences</h2>
+        <div class="section-wrapper">
+          <h2 class="section-title">Expériences</h2>
 
-        <div class="experiences">
-          <div class="experience">
-            <div class="experience-date">2012 <i class="sr-arrow"></i> Aujourd'hui</div>
-            <div class="experience-title">Développeur web</div>
-            <div class="experience-location">Oodrive | Paris</div>
-            <ul class="experience-missions">
-              <li>Développement d’applications pour la gestion de certificats personnels</li>
-              <li>Intégration des sites web de l’entreprise</li>
-              <li>Automatisation de la personnalisation client des applications de partage</li>
-            </ul>
-          </div>
-          <div class="experience">
-            <div class="experience-date">2010 <i class="sr-arrow"></i> 2012</div>
-          </div>
-          <div class="experience">
-            <div class="experience-date">2009 <i class="sr-arrow"></i> 2010</div>
+          <div class="experiences">
+            <div class="experience">
+              <div class="experience-date">2012 <i class="sr-arrow"></i> Aujourd'hui</div>
+              <div class="experience-title">Développeur web</div>
+              <div class="experience-location">Oodrive | Paris</div>
+              <ul class="experience-missions">
+                <li>Développement d’applications pour la gestion de certificats personnels</li>
+                <li>Intégration des sites web de l’entreprise</li>
+                <li>Automatisation de la personnalisation client des applications de partage</li>
+              </ul>
+            </div>
+            <div class="experience">
+              <div class="experience-date">2010 <i class="sr-arrow"></i> 2012</div>
+              <div class="experience-title">Développeur front-end</div>
+              <div class="experience-location">AXA France | Nanterre</div>
+              <ul class="experience-missions">
+                <li>Mise en place d’une API de géolocalisation pour la recherche des distributeurs</li>
+                <li>Amélioration continue de la compatibilité entre navigateurs et devices</li>
+                <li>Suivi de projet sur le lancement et la refonte de sites grands publics</li>
+                <li>Étude technique sur le choix d’un nouveau CMS</li>
+              </ul>
+            </div>
+            <div class="experience">
+              <div class="experience-date">2009 <i class="sr-arrow"></i> 2010</div>
+              <div class="experience-title">Développeur</div>
+              <div class="experience-location">Telindus | Paris</div>
+              <ul class="experience-missions">
+                <li>Développement d’une application de gestion de ressources humaines</li>
+                <li>Maintenance des applications internes et de l’intranet collaboratif</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="education-section">
-        <h2 class="section-title">Formations</h2>
+        <div class="section-wrapper">
+          <h2 class="section-title">Formations</h2>
+        </div>
       </section>
 
       <section class="interest-section">
-        <h2 class="section-title">Centres d'intérêts</h2>
+        <div class="section-wrapper">
+          <h2 class="section-title">Centres d'intérêts</h2>
+
+          <ul class="interests">
+            <li class="interest">
+              <i class="sr-volleyball"></i>
+              <div class="interest-name">Volley-Ball</div>
+            </li>
+            <li class="interest">
+              <i class="sr-roller"></i>
+              <div class="interest-name">Roller</div>
+            </li>
+            <li class="interest">
+              <i class="sr-tennis"></i>
+              <div class="interest-name">Tennis</div>
+            </li>
+            <li class="interest">
+              <i class="sr-cooking"></i>
+              <div class="interest-name">Cuisine</div>
+            </li>
+            <li class="interest">
+              <i class="sr-music"></i>
+              <div class="interest-name">Guitare</div>
+            </li>
+            <li class="interest">
+              <i class="sr-map"></i>
+              <div class="interest-name">Voyage</div>
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
 
