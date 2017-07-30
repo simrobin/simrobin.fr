@@ -12,7 +12,7 @@
     "watch:html": "watch --ignoreDirectoryPattern=/.*/ \"npm run build:html -s\" src",
     "build:styles": "node-sass --output-style compressed src/css/style.scss dist/css/style.css",
     "watch:styles": "npm run build:styles && node-sass -w src/css/style.scss dist/css/style.css",
-    "build:others": "cp -r src/fonts dist/",
+    "build:others": "cp -r src/fonts src/img dist/",
     "clean": "rimraf dist && mkdirp dist",
     "server": "http-server dist -o -c-1",
     "livereload": "livereload dist -e css"
