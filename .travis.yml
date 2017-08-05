@@ -1,0 +1,27 @@
+language: node_js
+sudo: required
+services:
+- docker
+node_js: 8
+script: |
+  npm run build
+
+  DOCKER_IMAGE_DEFAULT=${DOCKER_USER}/about
+  DOCKER_IMAGE_NAME=${DOCKER_IMAGE_DEFAULT}
+  if [ "${TRAVIS_BRANCH}" != "master" ]; then
+    DOCKER_IMAGE_NAME=${DOCKER_IMAGE_NAME}:${TRAVIS_BRANCH}
+  fi
+
+  docker build -t ${DOCKER_IMAGE_NAME} .
+after_success: |
+  docker login -u ${DOCKER_USER} -p ${DOCKER_PASS} && docker push ${DOCKER_IMAGE_NAME}
+notifications:
+  email: false
+deploy:
+- provider: script
+  skip_cleanup: true
+  script: curl -u ${DEPLOY_USER}:${DEPLOY_PASS} -X POST https://dashboard-api.simrobin.fr/containers/about/ --data-binary @docker-compose.yml
+  on:
+    all_branches: true
+    condition: ${TRAVIS_BRANCH} == 'master'
+
