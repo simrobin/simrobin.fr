@@ -13,7 +13,7 @@ const isBuild = ENV.includes('build');
 
 const config = {};
 
-config.entry = [`${srcPath}/css/style.scss`];
+config.entry = [`${srcPath}/js/main.js`];
 
 config.output = {
   path: distPath,
@@ -25,7 +25,7 @@ config.module = {
   loaders: [
     {
       test: /\.js$/,
-      loader: 'babel',
+      loader: 'babel-loader',
       include: srcPath,
     },
     {
@@ -45,6 +45,11 @@ config.module = {
       test: /\.(jpe?g|png|gif|svg)$/i,
       loader: 'file-loader?name=img/[name].[ext]',
       include: path.resolve(srcPath, 'img'),
+    },
+    {
+      test: /\.(pdf)$/i,
+      loader: 'file-loader?name=files/[name].[ext]',
+      include: path.resolve(srcPath, 'files'),
     },
   ],
 };
