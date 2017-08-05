@@ -1,3 +1,4 @@
+import '../favicon.ico';
 import '../css/style.scss';
 import '../files/cv-simon-robin.pdf';
 

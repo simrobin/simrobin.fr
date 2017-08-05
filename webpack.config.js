@@ -51,6 +51,12 @@ config.module = {
       loader: 'file-loader?name=files/[name].[ext]',
       include: path.resolve(srcPath, 'files'),
     },
+    {
+      test: /favicon\.(ico)$/i,
+      loader: 'file-loader?name=[name].[ext]',
+      include: srcPath,
+    },
+
   ],
 };
 
