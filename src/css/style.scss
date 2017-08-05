@@ -15,6 +15,7 @@ body {
   font-family: $font-family;
   font-weight: $font-regular-weight;
   font-size: .675rem;
+  color: $gray;
 }
 
 strong {
@@ -94,6 +95,7 @@ header {
 
 .section-title {
   font-size: 2em;
+  margin-bottom: 2rem;
   text-transform: uppercase;
 
   &:before {
@@ -120,7 +122,6 @@ header {
 .about-me,
 .about-skills {
   font-size: 1.4em;
-  margin-top: 4em;
 }
 
 .about-me {
@@ -128,6 +129,7 @@ header {
 }
 
 .about-skills {
+  margin-top: 4em;
   & > li {
     & + li {
       margin-top: .5em;
@@ -175,11 +177,8 @@ header {
   }
 }
 
-.experiences {
-  margin-top: 2em;
-}
-
-.experience {
+.experience,
+.education {
   padding: 0 1.5em 1em;
   position: relative;
   border-left-style: solid;
@@ -196,24 +195,46 @@ header {
     height: 1.75em;
     border-radius: 100%;
     background-color: $yellow;
-    border: solid .4em $light-gray;
+    border-style: solid;
+    border-width: .4em;
+  }
+}
+
+.experience {
+  &:before {
+    border-color: $light-gray;
   }
 }
 
 @media (max-width: $tablet-max-width) {
-  .experience {
+  .experience,
+  .education {
     border-left-style: solid;
     border-left-width: .5em;
+
+    &:nth-of-type(n+2) {
+      padding-top: 1.5rem;
+
+      &:before {
+        top: 1.5rem;
+      }
+    }
+  }
+
+  .experience-date,
+  .education-date {
+    margin-top: -.5rem;
   }
 }
 
 @media (min-width: $desktop-min-width) {
-  .experiences {
+  .experiences,
+  .educations {
     display: flex;
   }
 
-  .experience {
-    flex-basis: (100% / 3);
+  .experience,
+  .education {
     padding: 1em .75em;
     border-left-style: none;
     border-left-width: 0;
@@ -226,9 +247,18 @@ header {
       left: 0;
     }
   }
+
+  .experience {
+    flex-basis: (100% / 3);
+  }
+
+  .education {
+    flex-basis: 50%;
+  }
 }
 
-.experience-date {
+.experience-date,
+.education-date {
   display: inline-block;
   padding: .75em 1em;
   background-color: $yellow;
@@ -236,13 +266,15 @@ header {
   text-transform: uppercase;
 }
 
-.experience-title {
+.experience-title,
+.education-title {
   margin-top: 1.5em;
   font-size: 1.4em;
   text-transform: uppercase;
 }
 
-.experience-location {
+.experience-location,
+.education-location {
   margin-top: .5em;
   font-size: 1.4em;
   font-weight: $font-light-weight;
@@ -256,6 +288,84 @@ header {
   & > li + li {
     margin-top: .5em;
   }
+}
+
+@media (min-width: $laptop-min-width) {
+  .education-section {
+    & > .section-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .education-wrapper {
+    flex-basis: 40%;
+  }
+
+  .resume {
+    flex-basis: 60%;
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  .education-wrapper {
+    flex-basis: 55%;
+  }
+
+  .resume {
+    flex-basis: 35%;
+  }
+}
+
+.education {
+  &:before {
+    border-color: #fff;
+  }
+}
+
+.education-icon {
+  font-size: 6em;
+}
+
+@media (max-width: $tablet-max-width) {
+  .resume {
+    margin-top: 2rem;
+  }
+}
+
+.resume {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background-color: $yellow;
+  text-align: center;
+
+  > * {
+    flex-basis: 100%;
+  }
+
+  > .sr-file {
+    font-size: 4em;
+  }
+}
+
+.resume-description {
+  margin-top: 1rem;
+  font-size: 1.4em;
+}
+
+.resume-link {
+  display: inline-block;
+  flex-basis: auto;
+  padding: 1rem 2rem;
+  margin-top: 1.5rem;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  background-color: #fff;
+  color: $gray;
+  text-decoration: none;
 }
 
 .interests {
@@ -284,8 +394,7 @@ header {
   }
 }
 
-@media (max-width: $mobile-max-width) {
-  $interest-per-line: 2;
+@mixin interest($interest-per-line) {
   .interest {
     flex-basis: (100% / $interest-per-line);
 
@@ -295,15 +404,12 @@ header {
   }
 }
 
-@media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
-  $interest-per-line: 3;
-  .interest {
-    flex-basis: (100% / $interest-per-line);
+@media (max-width: $mobile-max-width) {
+  @include interest(2);
+}
 
-    &:nth-of-type(n + #{($interest-per-line + 1)}) {
-      margin-top: 3em;
-    }
-  }
+@media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+  @include interest(3);
 }
 
 footer {
