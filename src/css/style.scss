@@ -160,10 +160,10 @@ header {
   }
 }
 
-@media (min-width: $large-desktop-min-width) {
+@media (min-width: 1150px) {
   .about-section {
     & > .section-wrapper {
-      background-size: 32.5%;
+      background-size: 30%;
     }
   }
 }
