@@ -417,4 +417,8 @@ footer {
   font-size: 1.2em;
   border-bottom: solid 1em $yellow;
   text-align: center;
+
+  & > a {
+    color: inherit;
+  }
 }
