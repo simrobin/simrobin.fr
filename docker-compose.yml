@@ -6,6 +6,8 @@ services:
     command:
     - -csp
     - default-src 'self'; script-src 'self' 'unsafe-inline' www.google-analytics.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com cdnjs.cloudflare.com; img-src 'self' www.google-analytics.com; font-src 'self' fonts.gstatic.com
+    - -headers
+    - X-UA-Compatible:ie=edge
     labels:
       traefik.frontend.passHostHeader: 'true'
       traefik.frontend.rule: 'Host: simrobin.fr'

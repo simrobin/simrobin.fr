@@ -36,8 +36,8 @@ config.module = {
         use: [
           { loader: 'css-loader', options: { minimize: isBuild } },
           'postcss-loader',
-          'sass-loader'
-        ]
+          'sass-loader',
+        ],
       }),
       include: srcPath,
     },
@@ -61,13 +61,12 @@ config.module = {
       loader: 'file-loader?name=[name].[ext]',
       include: srcPath,
     },
-
   ],
 };
 
 config.plugins = [
   new HtmlWebpackPlugin({
-    template: `${srcPath}/index.html`
+    template: `${srcPath}/index.html`,
   }),
   new ExtractTextPlugin('css/style.[hash].css'),
 ];
