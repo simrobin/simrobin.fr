@@ -2,6 +2,7 @@ const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const autoprefixer = require('autoprefixer');
 
@@ -32,7 +33,11 @@ config.module = {
       test: /\.scss$/,
       loader: ExtractTextPlugin.extract({
         fallback: 'style-loader',
-        use: ['css-loader', 'postcss-loader', 'sass-loader']
+        use: [
+          { loader: 'css-loader', options: { minimize: isBuild } },
+          'postcss-loader',
+          'sass-loader'
+        ]
       }),
       include: srcPath,
     },
@@ -66,5 +71,9 @@ config.plugins = [
   }),
   new ExtractTextPlugin('css/style.[hash].css'),
 ];
+
+if (isBuild) {
+  config.plugins.push(new UglifyJsPlugin());
+}
 
 module.exports = config;
