@@ -2,6 +2,9 @@ import '../favicon.ico';
 import '../css/style.scss';
 import '../files/cv-simon-robin.pdf';
 
+import registerServiceWorker from './registerServiceWorker';
+registerServiceWorker();
+
 {
   (function(i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;

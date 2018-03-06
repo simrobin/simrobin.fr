@@ -1,8 +1,10 @@
 const path = require('path');
 
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
 const autoprefixer = require('autoprefixer');
 
@@ -12,6 +14,9 @@ const distPath = `${__dirname}/dist`;
 const ENV = process.env.npm_lifecycle_event;
 const isBuild = ENV.includes('build');
 
+const publicUrl = isBuild ? '' : 'http://localhost:8080'
+const publicPath = isBuild ? '/' : 'http://localhost:8080/';
+
 const config = {};
 
 config.entry = [`${srcPath}/js/main.js`];
@@ -19,7 +24,7 @@ config.entry = [`${srcPath}/js/main.js`];
 config.output = {
   path: distPath,
   filename: 'js/main.[hash].js',
-  publicPath: isBuild ? '/' : 'http://localhost:8080/',
+  publicPath,
 };
 
 config.module = {
@@ -65,10 +70,24 @@ config.module = {
 };
 
 config.plugins = [
+  new webpack.DefinePlugin({
+    'process.env': JSON.stringify({
+      PUBLIC_URL: publicUrl,
+      NODE_ENV: process.env.NODE_ENV,
+    }),
+  }),
   new HtmlWebpackPlugin({
     template: `${srcPath}/index.html`,
   }),
   new ExtractTextPlugin('css/style.[hash].css'),
+  new SWPrecacheWebpackPlugin({
+    dontCacheBustUrlsMatching: /\.\w{8}\./,
+    filename: 'service-worker.js',
+    minify: false,
+    navigateFallback: publicUrl + '/index.html',
+    navigateFallbackWhitelist: [/^(?!\/__).*/],
+    staticFileGlobsIgnorePatterns: [/\.map$/],
+  }),
 ];
 
 if (isBuild) {
