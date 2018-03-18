@@ -19,7 +19,10 @@ const publicPath = isBuild ? '/' : 'http://localhost:8080/';
 
 const config = {};
 
-config.entry = [`${srcPath}/js/main.js`];
+config.entry = [
+  `${srcPath}/js/main.js`,
+  `${srcPath}/css/style.scss`,
+];
 
 config.output = {
   path: distPath,
@@ -28,7 +31,7 @@ config.output = {
 };
 
 config.module = {
-  loaders: [
+  rules: [
     {
       test: /\.js$/,
       loader: 'babel-loader',
@@ -90,8 +93,6 @@ config.plugins = [
   }),
 ];
 
-if (isBuild) {
-  config.plugins.push(new UglifyJsPlugin());
-}
+config.mode = isBuild ? 'production': 'development';
 
 module.exports = config;
