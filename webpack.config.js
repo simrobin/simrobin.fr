@@ -7,8 +7,7 @@ const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
 const autoprefixer = require('autoprefixer');
 
-const srcPath = `${__dirname}/src`;
-const distPath = `${__dirname}/dist`;
+const srcPath = './src';
 
 const ENV = process.env.npm_lifecycle_event;
 const isBuild = ENV.includes('build');
@@ -18,10 +17,13 @@ const publicPath = isBuild ? '/' : 'http://localhost:8080/';
 
 const config = {};
 
-config.entry = [`${srcPath}/js/main.js`, `${srcPath}/css/style.scss`];
+config.entry = [
+  `${srcPath}/js/main.js`,
+  `${srcPath}/css/style.scss`,
+];
 
 config.output = {
-  path: distPath,
+  path: path.resolve('dist'),
   filename: 'js/main.[hash].js',
   publicPath
 };
@@ -31,7 +33,6 @@ config.module = {
     {
       test: /\.js$/,
       loader: 'babel-loader',
-      include: srcPath
     },
     {
       test: /\.scss$/,
@@ -41,7 +42,6 @@ config.module = {
         'postcss-loader',
         'sass-loader'
       ],
-      include: srcPath
     },
     {
       test: /\.(eot|svg|ttf|woff|woff2)$/,
@@ -61,7 +61,6 @@ config.module = {
     {
       test: /favicon\.(ico)$/i,
       loader: 'file-loader?name=[name].[ext]',
-      include: srcPath
     }
   ]
 };
