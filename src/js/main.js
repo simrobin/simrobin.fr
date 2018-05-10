@@ -1,4 +1,3 @@
-import '../favicon.ico';
 import '../files/cv-simon-robin.pdf';
 
 import registerServiceWorker from './registerServiceWorker';
