@@ -5,8 +5,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
-const autoprefixer = require('autoprefixer');
-
 const srcPath = './src';
 
 const ENV = process.env.npm_lifecycle_event;
@@ -38,7 +36,7 @@ config.module = {
       test: /\.scss$/,
       loader: [
         isBuild ? MiniCssExtractPlugin.loader : 'style-loader',
-        { loader: 'css-loader', options: { minimize: isBuild } },
+        'css-loader',
         'postcss-loader',
         'sass-loader'
       ],
@@ -58,10 +56,6 @@ config.module = {
       loader: 'file-loader?name=files/[name].[ext]',
       include: path.resolve(srcPath, 'files')
     },
-    {
-      test: /favicon\.(ico)$/i,
-      loader: 'file-loader?name=[name].[ext]',
-    }
   ]
 };
 
