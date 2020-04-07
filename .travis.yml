@@ -1,8 +1,9 @@
+---
 language: node_js
 sudo: required
 services:
-- docker
-node_js: 8
+  - docker
+node_js: 12
 script: |
   npm run build
   DOCKER_IMAGE_NAME=${DOCKER_USER}/about
@@ -15,8 +16,8 @@ after_success: |
 notifications:
   email: false
 deploy:
-- provider: script
-  skip_cleanup: true
-  script: bash script/deploy about "@docker-compose.yml"
-  on:
-    branch: master
+  - provider: script
+    skip_cleanup: true
+    script: bash script/deploy about "@docker-compose.yml"
+    on:
+      branch: master
