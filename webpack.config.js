@@ -15,15 +15,12 @@ const publicPath = isBuild ? '/' : 'http://localhost:8080/';
 
 const config = {};
 
-config.entry = [
-  `${srcPath}/js/main.js`,
-  `${srcPath}/css/style.scss`,
-];
+config.entry = [`${srcPath}/js/main.js`, `${srcPath}/css/style.scss`];
 
 config.output = {
   path: path.resolve('dist'),
   filename: 'js/main.[hash].js',
-  publicPath
+  publicPath,
 };
 
 config.module = {
@@ -38,36 +35,36 @@ config.module = {
         isBuild ? MiniCssExtractPlugin.loader : 'style-loader',
         'css-loader',
         'postcss-loader',
-        'sass-loader'
+        'sass-loader',
       ],
     },
     {
       test: /\.(eot|svg|ttf|woff|woff2)$/,
       loader: 'file-loader?name=fonts/[name].[ext]',
-      include: path.resolve(srcPath, 'fonts')
+      include: path.resolve(srcPath, 'fonts'),
     },
     {
       test: /\.(jpe?g|png|gif|svg)$/i,
       loader: 'file-loader?name=img/[name].[ext]',
-      include: path.resolve(srcPath, 'img')
+      include: path.resolve(srcPath, 'img'),
     },
     {
       test: /\.(pdf)$/i,
       loader: 'file-loader?name=files/[name].[ext]',
-      include: path.resolve(srcPath, 'files')
+      include: path.resolve(srcPath, 'files'),
     },
-  ]
+  ],
 };
 
 config.plugins = [
   new webpack.DefinePlugin({
     'process.env': JSON.stringify({
       PUBLIC_URL: publicUrl,
-      NODE_ENV: process.env.NODE_ENV
-    })
+      NODE_ENV: process.env.NODE_ENV,
+    }),
   }),
   new HtmlWebpackPlugin({
-    template: `${srcPath}/index.html`
+    template: `${srcPath}/index.html`,
   }),
   new SWPrecacheWebpackPlugin({
     dontCacheBustUrlsMatching: /\.\w{8}\./,
@@ -75,15 +72,15 @@ config.plugins = [
     minify: false,
     navigateFallback: publicUrl + '/index.html',
     navigateFallbackWhitelist: [/^(?!\/__).*/],
-    staticFileGlobsIgnorePatterns: [/\.map$/]
-  })
+    staticFileGlobsIgnorePatterns: [/\.map$/],
+  }),
 ];
 
 if (isBuild) {
   config.plugins.push(
     new MiniCssExtractPlugin({
-      filename: 'css/style.[hash].css'
-    })
+      filename: 'css/style.[hash].css',
+    }),
   );
 }
 
