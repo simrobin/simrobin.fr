@@ -46,10 +46,10 @@ npm_check() {
     run_command npm --silent run lint:file ${JS_FILES[@]}
   fi
 
-  # if [[ -n "${CSS_FILES:-}" ]]; then
-  #   printf "%bLinting css files%b\n" "${BLUE}" "${RESET}"
-  #   run_command npm --silent run stylelint:file ${CSS_FILES[@]}
-  # fi
+  if [[ -n "${CSS_FILES:-}" ]]; then
+    printf "%bLinting css files%b\n" "${BLUE}" "${RESET}"
+    run_command npm --silent run stylelint:file ${CSS_FILES[@]}
+  fi
 }
 
 main() {
