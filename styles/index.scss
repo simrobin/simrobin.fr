@@ -143,7 +143,7 @@ header {
 @media (min-width: $laptop-min-width) {
   .about-section {
     & > .section-wrapper {
-      background-image: url('../img/profile.jpg');
+      background-image: url('/images/profile.jpg');
       background-position: right center;
       background-repeat: no-repeat;
       background-size: 50%;

@@ -5,10 +5,9 @@ sudo: required
 services:
   - docker
 node_js: 12
-script: |
-  npm run build
-  DOCKER_IMAGE_NAME=${DOCKER_USER}/about
-  docker build -t ${DOCKER_IMAGE_NAME} .
+env:
+  - DOCKER_IMAGE_NAME=${DOCKER_USER}/about
+script: npm run build && npm run export && docker build -t ${DOCKER_IMAGE_NAME} .
 after_success: |
   if [ "${TRAVIS_BRANCH}" == "master" ]; then
     echo ${DOCKER_PASS} | docker login -u ${DOCKER_USER} --password-stdin
