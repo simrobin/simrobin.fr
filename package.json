@@ -13,7 +13,7 @@
     "build": "next build",
     "export": "next export",
     "start": "next start",
-    "lint": "eslint --config ./.eslintrc.js --fix ./pages/**",
+    "lint": "eslint --config ./.eslintrc.js --fix ./**",
     "lint:file": "eslint --config ./.eslintrc.js --fix",
     "stylelint": "stylelint --fix \"styles/**/*.scss\"",
     "stylelint:file": "stylelint --fix"

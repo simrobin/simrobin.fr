@@ -1,5 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
+import Icon from '../components/Icon';
+
+const gray = '#2B2B2B';
 
 export default function Index() {
   return (
@@ -33,35 +36,38 @@ export default function Index() {
         />
       </Head>
       <header>
-        <i className="sr-logo"></i>
+        <Icon name="logo" fill="#fff" size="64" />
         <h1 className="title">
           <strong className="title-name">Simon Robin</strong>
           <em className="title-job">Développeur Front&#8209;End</em>
         </h1>
         <div className="contact">
           <a
+            className="contact__link"
             href="mailto:simon@simrobin.fr"
             title="M'envoyer un message"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="sr-mail"></i> Message
+            <Icon className="align-top margin-right" name="mail" size="18" /> Message
           </a>
           <a
+            className="contact__link"
             href="https://twitter.com/simrobins"
             title="Me suivre sur Twitter"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="sr-twitter"></i> Twitter
+            <Icon className="align-top margin-right" name="twitter" size="18" /> Twitter
           </a>
           <a
+            className="contact__link"
             href="https://github.com/simrobin"
             title="Consulter mon GitHub"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="sr-github"></i> GitHub
+            <Icon className="align-top margin-right" name="github" size="18" /> GitHub
           </a>
         </div>
       </header>
@@ -69,7 +75,10 @@ export default function Index() {
       <main>
         <section className="about-section">
           <div className="section-wrapper">
-            <h2 className="section-title">À propos de moi</h2>
+            <h2 className="section-title">
+              <Icon className="align-top margin-right" name="arrow" size="22" />{' '}
+              <span>À propos de moi</span>
+            </h2>
 
             <p className="about-me">
               Passionné de développement, j’aime découvrir et construire des applications web qui
@@ -102,7 +111,9 @@ export default function Index() {
             <div className="experiences">
               <div className="experience">
                 <div className="experience-date">
-                  2017 <i className="sr-arrow"></i> Aujourd'hui
+                  2017{' '}
+                  <Icon name="arrow" fill={gray} size="12" style={{ verticalAlign: 'middle' }} />{' '}
+                  Aujourd'hui
                 </div>
                 <div className="experience-title">Développeur front-end</div>
                 <div className="experience-location">MeilleursAgents | Paris</div>
@@ -114,7 +125,7 @@ export default function Index() {
               </div>
               <div className="experience">
                 <div className="experience-date">
-                  2012 <i className="sr-arrow"></i> 2017
+                  2012 <Icon name="arrow" fill={gray} className="align-top" size="12" /> 2017
                 </div>
                 <div className="experience-title">Développeur web</div>
                 <div className="experience-location">Oodrive | Paris</div>
@@ -126,7 +137,7 @@ export default function Index() {
               </div>
               <div className="experience">
                 <div className="experience-date">
-                  2010 <i className="sr-arrow"></i> 2012
+                  2010 <Icon name="arrow" fill={gray} className="align-top" size="12" /> 2012
                 </div>
                 <div className="experience-title">Développeur front-end</div>
                 <div className="experience-location">AXA France | Nanterre</div>
@@ -141,7 +152,7 @@ export default function Index() {
               </div>
               <div className="experience">
                 <div className="experience-date">
-                  2009 <i className="sr-arrow"></i> 2010
+                  2009 <Icon name="arrow" fill={gray} className="align-top" size="12" /> 2010
                 </div>
                 <div className="experience-title">Développeur</div>
                 <div className="experience-location">Telindus | Paris</div>
@@ -162,22 +173,20 @@ export default function Index() {
               <div className="educations">
                 <div className="education">
                   <div className="education-icon">
-                    <i className="sr-school"></i>
+                    <Icon name="school" size="64" fill={gray} />
                   </div>
                   <div className="education-date">
-                    2010
-                    <i className="sr-arrow"></i> 2012
+                    2010 <Icon name="arrow" fill={gray} className="align-top" size="12" /> 2012
                   </div>
                   <div className="education-title">Master MIAGE</div>
                   <div className="education-location">Université Paris XI | Orsay</div>
                 </div>
                 <div className="education">
                   <div className="education-icon">
-                    <i className="sr-school"></i>
+                    <Icon name="school" size="64" fill={gray} />
                   </div>
                   <div className="education-date">
-                    2007
-                    <i className="sr-arrow"></i> 2010
+                    2007 <Icon name="arrow" fill={gray} className="align-top" size="12" /> 2010
                   </div>
                   <div className="education-title">Licence MIAGE</div>
                   <div className="education-location">Université Paris XI | Orsay</div>
@@ -186,7 +195,7 @@ export default function Index() {
             </div>
 
             <div className="resume">
-              <i className="sr-file"></i>
+              <Icon name="file" size="44" fill={gray} />
               <div className="resume-description">Besoin d'une version transportable ?</div>
               <a
                 href="/files/cv-simon-robin.pdf"
@@ -206,27 +215,27 @@ export default function Index() {
 
             <ul className="interests">
               <li className="interest">
-                <i className="sr-volleyball"></i>
+                <Icon name="volleyball" size="44" />
                 <p className="interest-name">Volley-Ball</p>
               </li>
               <li className="interest">
-                <i className="sr-roller"></i>
+                <Icon name="roller" size="44" />
                 <p className="interest-name">Roller</p>
               </li>
               <li className="interest">
-                <i className="sr-tennis"></i>
+                <Icon name="tennis" size="44" />
                 <p className="interest-name">Tennis</p>
               </li>
               <li className="interest">
-                <i className="sr-cooking"></i>
+                <Icon name="cooking" size="44" />
                 <p className="interest-name">Cuisine</p>
               </li>
               <li className="interest">
-                <i className="sr-music"></i>
+                <Icon name="music" size="44" />
                 <p className="interest-name">Guitare</p>
               </li>
               <li className="interest">
-                <i className="sr-map"></i>
+                <Icon name="map" size="44" />
                 <p className="interest-name">Voyage</p>
               </li>
             </ul>
