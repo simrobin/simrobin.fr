@@ -2,7 +2,7 @@ import React from 'react';
 
 const yellow = '#ffdc00';
 
-interface SvgComponentProps {
+interface IconProps {
   name:
     | 'arrow'
     | 'book'
@@ -69,7 +69,7 @@ export default function Icon({
   height,
   fill = yellow,
   ...rest
-}: SvgComponentProps) {
+}: IconProps) {
   return (
     <svg
       width={typeof width !== 'undefined' ? width : size}
