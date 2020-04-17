@@ -1,31 +1,7 @@
 @import './reset';
-@import './webfont';
 @import './vars';
-
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-body {
-  color: $gray;
-  font-family: $font-family;
-  font-size: 0.675rem;
-  font-weight: $font-regular-weight;
-}
-
-strong {
-  font-weight: $font-bold-weight;
-}
-
-.yellow {
-  color: $yellow;
-}
+@import './base';
+@import './helpers';
 
 header {
   background-color: $gray;
@@ -33,10 +9,6 @@ header {
   padding: 8em 8%;
   text-align: center;
   width: 100%;
-
-  & > .sr-logo {
-    font-size: 6em;
-  }
 }
 
 .title {
@@ -67,18 +39,13 @@ header {
   justify-content: space-between;
   margin: 4em auto 0;
   max-width: 420px;
+}
 
-  & > a {
-    color: #fff;
-    font-size: 1.6em;
-    text-align: center;
-    text-decoration: none;
-
-    & > i {
-      color: $yellow;
-      margin-right: 0.4em;
-    }
-  }
+.contact__link {
+  color: #fff;
+  font-size: 1.6em;
+  text-align: center;
+  text-decoration: none;
 }
 
 @media (min-width: $tablet-min-width) {
@@ -96,16 +63,10 @@ header {
 }
 
 .section-title {
+  display: flex;
   font-size: 2em;
   margin-bottom: 2rem;
   text-transform: uppercase;
-
-  &::before {
-    @extend %icon;
-    color: $yellow;
-    content: '\e901';
-    margin-right: 0.5em;
-  }
 }
 
 .about-section,
@@ -143,7 +104,7 @@ header {
 @media (min-width: $laptop-min-width) {
   .about-section {
     & > .section-wrapper {
-      background-image: url('../img/profile.jpg');
+      background-image: url('/images/profile.jpg');
       background-position: right center;
       background-repeat: no-repeat;
       background-size: 50%;
@@ -348,10 +309,6 @@ header {
   > * {
     flex-basis: 100%;
   }
-
-  > .sr-file {
-    font-size: 4em;
-  }
 }
 
 .resume-description {
@@ -379,22 +336,13 @@ header {
 }
 
 .interest {
-  & > i,
-  & > .interest-name {
-    text-align: center;
-  }
+  text-align: center;
+}
 
-  & > i {
-    color: $yellow;
-    display: block;
-    font-size: 4em;
-  }
-
-  & > .interest-name {
-    font-size: 1.4em;
-    margin-top: 1em;
-    text-transform: uppercase;
-  }
+.interest-name {
+  font-size: 1.4em;
+  margin-top: 1em;
+  text-transform: uppercase;
 }
 
 @mixin interest($interest-per-line) {
