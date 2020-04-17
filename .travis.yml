@@ -7,7 +7,14 @@ services:
 node_js: 12
 env:
   - DOCKER_IMAGE_NAME=${DOCKER_USER}/about
-script: npm run build && npm run export && docker build -t ${DOCKER_IMAGE_NAME} .
+before_script:
+  - npm run lint
+  - npm run stylelint
+  - npm run test:ci
+  - npm run build
+  - npm run export
+script:
+  - docker build -t ${DOCKER_IMAGE_NAME} .
 after_success: |
   if [ "${TRAVIS_BRANCH}" == "master" ]; then
     echo ${DOCKER_PASS} | docker login -u ${DOCKER_USER} --password-stdin
