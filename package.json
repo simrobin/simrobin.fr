@@ -47,7 +47,7 @@
     "eslint-plugin-react-hooks": "3.0.0",
     "jest": "25.4.0",
     "prettier": "2.0.5",
-    "sass": "1.26.3",
+    "sass": "1.26.5",
     "stylelint": "13.3.3",
     "stylelint-config-sass-guidelines": "7.0.0",
     "typescript": "3.8.3"
