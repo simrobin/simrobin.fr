@@ -48,7 +48,7 @@
     "jest": "25.4.0",
     "prettier": "2.0.4",
     "sass": "1.26.3",
-    "stylelint": "13.3.2",
+    "stylelint": "13.3.3",
     "stylelint-config-sass-guidelines": "7.0.0",
     "typescript": "3.8.3"
   },
