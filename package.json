@@ -13,9 +13,9 @@
     "build": "next build",
     "serve": "next start",
     "export": "next export",
-    "lint": "eslint --config ./.eslintrc.js --fix \"./**/*.{j,t}s{x,}\"",
+    "lint": "eslint --config ./.eslintrc.js --fix \"src/**/*.{j,t}s{x,}\"",
     "lint:file": "eslint --config ./.eslintrc.js --fix",
-    "stylelint": "stylelint --fix \"styles/**/*.scss\"",
+    "stylelint": "stylelint --fix \"src/styles/**/*.scss\"",
     "stylelint:file": "stylelint --fix",
     "test": "jest --watch",
     "test:ci": "jest --ci"
