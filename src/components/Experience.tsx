@@ -1,6 +1,8 @@
 import React, { ReactNode } from 'react';
-import Icon from './Icon';
+
 import { gray } from '../utils/constants';
+
+import Icon from './Icon';
 
 interface ExperienceProps {
   startDate: string;

@@ -1,6 +1,8 @@
 import React from 'react';
-import Icon from './Icon';
+
 import { gray } from '../utils/constants';
+
+import Icon from './Icon';
 
 interface EducationProps {
   startDate: string;
