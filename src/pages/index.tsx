@@ -1,9 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
-import Icon from '../components/Icon';
-import Header from '../components/Header';
-import Experience from '../components/Experience';
+
 import Education from '../components/Education';
+import Experience from '../components/Experience';
+import Header from '../components/Header';
+import Icon from '../components/Icon';
 import { gray } from '../utils/constants';
 
 export default function Index() {
