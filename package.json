@@ -21,7 +21,7 @@
     "test:ci": "jest --ci"
   },
   "dependencies": {
-    "next": "10.0.0",
+    "next": "10.0.1",
     "react": "16.14.0",
     "react-dom": "16.14.0"
   },
