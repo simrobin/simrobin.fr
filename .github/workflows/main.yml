@@ -1,0 +1,54 @@
+---
+
+name: main
+
+on: [push]
+
+env:
+  NODE_VERSION: '12.x'
+  DOCKER_IMAGE_NAME: ${{ secrets.DOCKER_USER }}/timekeeper
+
+jobs:
+  continuous_integration:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Get npm cache directory
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Install app dependencies
+        run: npm ci
+
+      - name: Lint app files
+        run: npm run lint
+
+      - name: Build app
+        run: npm run build
+
+      - name: Package app with Docker
+        if: github.ref == 'refs/heads/master'
+        env:
+          DOCKER_USER: ${{ secrets.DOCKER_USER }}
+          DOCKER_PASS: ${{ secrets.DOCKER_PASS }}
+        run: |
+          npm run export
+          docker build -t ${DOCKER_IMAGE_NAME} .
+          echo ${DOCKER_PASS} | docker login -u ${DOCKER_USER} --password-stdin
+          docker push ${DOCKER_IMAGE_NAME}
+      - name: Deploy app
+        if: github.ref == 'refs/heads/master'
+        env:
+          DEPLOY_URL: ${{ secrets.DEPLOY_URL }}
+          DEPLOY_CREDENTIALS: ${{ secrets.DEPLOY_CREDENTIALS }}
+        run : bash script/deploy about "@docker-compose.yml"
+
