@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  extends: ['react-app', 'eslint-config-simrobin'],
+  extends: ['eslint-config-simrobin', 'react-app'],
   rules: {
     'react/react-in-jsx-scope': 'off',
   },
