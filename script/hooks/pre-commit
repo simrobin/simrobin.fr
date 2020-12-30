@@ -36,7 +36,7 @@ npm_check() {
   SCSS_FILES=$(get_files \*.scss)
 
   if [[ -n "${PACKAGE_JSON:-}" ]] || [[ -n "${JS_FILES:-}" ]] || [[ -n "${SCSS_FILES:-}" ]]; then
-    printf "%bChecking node_modules installation for %b\n" "${BLUE}" "${RESET}"
+    printf "%bChecking node_modules installation%b\n" "${BLUE}" "${RESET}"
     run_command npm --silent install --no-audit
   fi
 
