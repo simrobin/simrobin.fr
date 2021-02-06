@@ -6,7 +6,7 @@ on: [push]
 
 env:
   NODE_VERSION: '12.x'
-  DOCKER_IMAGE_NAME: ${{ secrets.DOCKER_USER }}/timekeeper
+  DOCKER_IMAGE_NAME: ${{ secrets.DOCKER_USER }}/about
 
 jobs:
   continuous_integration:
