@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 @import './reset';
 @import './vars';
 @import './base';
@@ -213,7 +215,7 @@ header {
   }
 
   .experience {
-    flex-basis: (100% / 3);
+    flex-basis: math.div(100%, 3);
   }
 
   .education {
@@ -347,7 +349,7 @@ header {
 
 @mixin interest($interest-per-line) {
   .interest {
-    flex-basis: (100% / $interest-per-line);
+    flex-basis: math.div(100%, $interest-per-line);
 
     &:nth-of-type(n + #{($interest-per-line + 1)}) {
       margin-top: 3em;
