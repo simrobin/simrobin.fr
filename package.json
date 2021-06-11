@@ -8,6 +8,10 @@
     "url": "git+https://github.com/simrobin/about.git"
   },
   "homepage": "https://simrobin.fr",
+  "engines": {
+    "node": ">=14",
+    "npm": ">=7"
+  },
   "scripts": {
     "start": "next",
     "build": "next build",
