@@ -41,7 +41,7 @@
     "babel-jest": "27.0.2",
     "eslint": "7.28.0",
     "eslint-config-react-app": "6.0.0",
-    "eslint-config-simrobin": "1.2.2",
+    "eslint-config-simrobin": "1.2.3",
     "eslint-plugin-flowtype": "5.7.2",
     "eslint-plugin-import": "2.23.4",
     "eslint-plugin-jsx-a11y": "6.4.1",
