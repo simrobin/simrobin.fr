@@ -5,7 +5,7 @@ name: main
 on: [push]
 
 env:
-  NODE_VERSION: '14.x'
+  NODE_VERSION: '16.x'
   DOCKER_IMAGE_NAME: ${{ secrets.DOCKER_USER }}/about
 
 jobs:
@@ -19,8 +19,8 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      - name: npm 7
-        run: npm i -g npm@7 --registry=https://registry.npmjs.org
+      - name: npm 8
+        run: npm i -g npm@8 --registry=https://registry.npmjs.org
 
       - name: Get npm cache directory
         uses: actions/cache@v1
