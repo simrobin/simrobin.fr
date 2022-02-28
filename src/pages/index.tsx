@@ -33,10 +33,6 @@ export default function Index() {
         <meta name="twitter:image" content="https://simrobin.fr/android-chrome-512x512.png" />
         <meta name="twitter:description" content="Simon Robin, Développeur Front-end sur Paris" />
         <meta name="twitter:title" content="Simon Robin" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500"
-        />
       </Head>
 
       <Header />
@@ -155,7 +151,7 @@ export default function Index() {
 
             <div className="resume">
               <Icon name="file" size="44" fill={gray} />
-              <div className="resume-description">Besoin d'une version transportable ?</div>
+              <div className="resume-description">Besoin d&#39;une version transportable ?</div>
               <a
                 href="/files/cv-simon-robin.pdf"
                 target="_blank"
@@ -170,7 +166,7 @@ export default function Index() {
 
         <section className="interest-section">
           <div className="section-wrapper">
-            <h2 className="section-title">Centres d'intérêts</h2>
+            <h2 className="section-title">Centres d&#39;intérêts</h2>
 
             <ul className="interests">
               <li className="interest">
