@@ -106,30 +106,14 @@ header {
 @media (min-width: $laptop-min-width) {
   .about-section {
     & > .section-wrapper {
-      background-image: url('/images/profile.jpg');
+      background-image: url('/images/profile.webp');
       background-position: right center;
       background-repeat: no-repeat;
-      background-size: 50%;
+      background-size: contain;
 
       & > * {
         width: 50%;
       }
-    }
-  }
-}
-
-@media (min-width: $desktop-min-width) {
-  .about-section {
-    & > .section-wrapper {
-      background-size: 40%;
-    }
-  }
-}
-
-@media (min-width: 1150px) {
-  .about-section {
-    & > .section-wrapper {
-      background-size: 30%;
     }
   }
 }
