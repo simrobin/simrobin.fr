@@ -170,8 +170,8 @@ export default function Index() {
 
             <ul className="interests">
               <li className="interest">
-                <Icon name="volleyball" size="44" />
-                <p className="interest-name">Volley-Ball</p>
+                <Icon name="bicycle" size="44" />
+                <p className="interest-name">Vélo</p>
               </li>
               <li className="interest">
                 <Icon name="roller" size="44" />
