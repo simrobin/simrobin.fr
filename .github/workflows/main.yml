@@ -5,7 +5,7 @@ name: main
 on: [push]
 
 env:
-  NODE_VERSION: '16.x'
+  NODE_VERSION: '18.x'
   DOCKER_IMAGE_NAME: ${{ secrets.DOCKER_USER }}/about
 
 jobs:
@@ -19,24 +19,24 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      - name: npm 8
-        run: npm i -g npm@8 --registry=https://registry.npmjs.org
+      - name: pnpm
+        run: npm install -g pnpm --registry=https://registry.npmjs.org
 
-      - name: Get npm cache directory
+      - name: Get pnpm cache directory
         uses: actions/cache@v3
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          path: ~/.local/share/pnpm/store
+          key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-node-
       - name: Install app dependencies
-        run: npm ci
+        run: pnpm install
 
       - name: Lint app files
-        run: npm run lint
+        run: pnpm run lint
 
       - name: Build app
-        run: npm run build
+        run: pnpm run build
 
       - name: Package app with Docker
         if: github.ref == 'refs/heads/main'
@@ -44,7 +44,7 @@ jobs:
           DOCKER_USER: ${{ secrets.DOCKER_USER }}
           DOCKER_PASS: ${{ secrets.DOCKER_PASS }}
         run: |
-          npm run export
+          pnpm run export
           docker build -t ${DOCKER_IMAGE_NAME} .
           echo ${DOCKER_PASS} | docker login -u ${DOCKER_USER} --password-stdin
           docker push ${DOCKER_IMAGE_NAME}
