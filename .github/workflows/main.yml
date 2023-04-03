@@ -6,7 +6,6 @@ on: [push]
 
 env:
   NODE_VERSION: '18.x'
-  DOCKER_IMAGE_NAME: ${{ secrets.DOCKER_USER }}/about
 
 jobs:
   continuous_integration:
@@ -37,20 +36,3 @@ jobs:
 
       - name: Build app
         run: pnpm run build
-
-      - name: Package app with Docker
-        if: github.ref == 'refs/heads/main'
-        env:
-          DOCKER_USER: ${{ secrets.DOCKER_USER }}
-          DOCKER_PASS: ${{ secrets.DOCKER_PASS }}
-        run: |
-          pnpm run export
-          docker build -t ${DOCKER_IMAGE_NAME} .
-          echo ${DOCKER_PASS} | docker login -u ${DOCKER_USER} --password-stdin
-          docker push ${DOCKER_IMAGE_NAME}
-      - name: Deploy app
-        if: github.ref == 'refs/heads/main'
-        env:
-          DEPLOY_URL: ${{ secrets.DEPLOY_URL }}
-          DEPLOY_CREDENTIALS: ${{ secrets.DEPLOY_CREDENTIALS }}
-        run: bash script/deploy about "@docker-compose.yml"

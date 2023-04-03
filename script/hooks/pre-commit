@@ -37,17 +37,17 @@ npm_check() {
 
   if [[ -n "${PACKAGE_JSON:-}" ]] || [[ -n "${JS_FILES:-}" ]] || [[ -n "${SCSS_FILES:-}" ]]; then
     printf "%bChecking node_modules installation%b\n" "${BLUE}" "${RESET}"
-    run_command npm --silent install --no-audit
+    run_command pnpm --silent install --no-audit
   fi
 
   if [[ -n "${JS_FILES:-}" ]]; then
     printf "%bLinting and formating javascript/typescript files%b\n" "${BLUE}" "${RESET}"
-    run_command npm --silent run lint:file ${JS_FILES[@]}
+    run_command pnpm --silent run lint:file ${JS_FILES[@]}
   fi
 
   if [[ -n "${SCSS_FILES:-}" ]]; then
     printf "%bLinting scss files%b\n" "${BLUE}" "${RESET}"
-    run_command npm --silent run stylelint:file ${SCSS_FILES[@]}
+    run_command pnpm --silent run stylelint:file ${SCSS_FILES[@]}
   fi
 }
 
