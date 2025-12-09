@@ -1,9 +1,9 @@
 @use 'sass:math';
 
-@import './reset';
-@import './vars';
-@import './base';
-@import './helpers';
+@use './vars' as *;
+@use './reset';
+@use './base';
+@use './helpers';
 
 header {
   background-color: $gray;
