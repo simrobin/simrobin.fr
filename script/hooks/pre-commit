@@ -31,23 +31,16 @@ npm_check() {
   PACKAGE_JSON=$(get_files "./package.json")
 
   local JS_FILES
-  local SCSS_FILES
   JS_FILES=$(get_files \*.{j,t}s{,x})
-  SCSS_FILES=$(get_files \*.scss)
 
-  if [[ -n "${PACKAGE_JSON:-}" ]] || [[ -n "${JS_FILES:-}" ]] || [[ -n "${SCSS_FILES:-}" ]]; then
+  if [[ -n "${PACKAGE_JSON:-}" ]] || [[ -n "${JS_FILES:-}" ]]; then
     printf "%bChecking node_modules installation%b\n" "${BLUE}" "${RESET}"
     run_command pnpm --silent install --no-audit
   fi
 
   if [[ -n "${JS_FILES:-}" ]]; then
-    printf "%bLinting and formating javascript/typescript files%b\n" "${BLUE}" "${RESET}"
+    printf "%bLinting and formatting javascript/typescript files%b\n" "${BLUE}" "${RESET}"
     run_command pnpm --silent run lint:file ${JS_FILES[@]}
-  fi
-
-  if [[ -n "${SCSS_FILES:-}" ]]; then
-    printf "%bLinting scss files%b\n" "${BLUE}" "${RESET}"
-    run_command pnpm --silent run stylelint:file ${SCSS_FILES[@]}
   fi
 }
 

@@ -1,5 +1,5 @@
-import React from 'react';
 import Head from 'next/head';
+import React from 'react';
 
 import Education from '../components/Education';
 import Experience from '../components/Experience';
@@ -80,11 +80,9 @@ export default function Index() {
                 title="Développeur front-end"
                 location="MeilleursAgents | Paris"
               >
-                <>
-                  <li>Développement et maintenance des fonctionnalités du site web</li>
-                  <li>Conception d’outils en ligne pour les particuliers et les agences</li>
-                  <li>Maintien en condition opérationnelle de la stack front</li>
-                </>
+                <li>Développement et maintenance des fonctionnalités du site web</li>
+                <li>Conception d’outils en ligne pour les particuliers et les agences</li>
+                <li>Maintien en condition opérationnelle de la stack front</li>
               </Experience>
               <Experience
                 startDate="2012"
@@ -92,11 +90,9 @@ export default function Index() {
                 title="Développeur web"
                 location="Oodrive | Paris"
               >
-                <>
-                  <li>Développement d’applications pour la gestion de certificats personnels</li>
-                  <li>Intégration des sites web de l’entreprise</li>
-                  <li>Automatisation de la personnalisation client des applications de partage</li>
-                </>
+                <li>Développement d’applications pour la gestion de certificats personnels</li>
+                <li>Intégration des sites web de l’entreprise</li>
+                <li>Automatisation de la personnalisation client des applications de partage</li>
               </Experience>
               <Experience
                 startDate="2010"
@@ -104,14 +100,12 @@ export default function Index() {
                 title="Développeur front-end"
                 location="AXA France | Nanterre"
               >
-                <>
-                  <li>
-                    Mise en place d’une API de géolocalisation pour la recherche des distributeurs
-                  </li>
-                  <li>Amélioration continue de la compatibilité entre navigateurs et devices</li>
-                  <li>Suivi de projet sur le lancement et la refonte de sites grands publics</li>
-                  <li>Étude technique sur le choix d’un nouveau CMS</li>
-                </>
+                <li>
+                  Mise en place d’une API de géolocalisation pour la recherche des distributeurs
+                </li>
+                <li>Amélioration continue de la compatibilité entre navigateurs et devices</li>
+                <li>Suivi de projet sur le lancement et la refonte de sites grands publics</li>
+                <li>Étude technique sur le choix d’un nouveau CMS</li>
               </Experience>
               <Experience
                 startDate="2009"
@@ -119,10 +113,8 @@ export default function Index() {
                 title="Développeur"
                 location="Telindus | Paris"
               >
-                <>
-                  <li>Développement d’une application de gestion de ressources humaines</li>
-                  <li>Maintenance des applications internes et de l’intranet collaboratif</li>
-                </>
+                <li>Développement d’une application de gestion de ressources humaines</li>
+                <li>Maintenance des applications internes et de l’intranet collaboratif</li>
               </Experience>
             </div>
           </div>

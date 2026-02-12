@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { gray } from '../utils/constants';
 
 import Icon from './Icon';

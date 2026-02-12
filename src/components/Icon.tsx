@@ -1,5 +1,3 @@
-import React from 'react';
-
 const yellow = '#ffdc00';
 
 interface IconProps {
@@ -24,7 +22,7 @@ interface IconProps {
   size?: string | number;
   width?: string | number;
   height?: string | number;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 const icons: { [key: string]: string } = {
@@ -67,6 +65,8 @@ export default function Icon({
 }: IconProps) {
   return (
     <svg
+      role="img"
+      aria-label={name}
       width={typeof width !== 'undefined' ? width : size}
       height={typeof height !== 'undefined' ? height : size}
       xmlns="http://www.w3.org/2000/svg"
