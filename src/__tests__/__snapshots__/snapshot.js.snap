@@ -4,7 +4,9 @@ exports[`Index should match snapshot 1`] = `
 <div>
   <header>
     <svg
+      aria-label="logo"
       height="64"
+      role="img"
       viewBox="0 0 32 32"
       width="64"
       xmlns="http://www.w3.org/2000/svg"
@@ -39,8 +41,10 @@ exports[`Index should match snapshot 1`] = `
         title="M'envoyer un message"
       >
         <svg
+          aria-label="mail"
           class="align-top margin-right"
           height="18"
+          role="img"
           viewBox="0 0 32 32"
           width="18"
           xmlns="http://www.w3.org/2000/svg"
@@ -60,8 +64,10 @@ exports[`Index should match snapshot 1`] = `
         title="Me suivre sur Twitter"
       >
         <svg
+          aria-label="twitter"
           class="align-top margin-right"
           height="18"
+          role="img"
           viewBox="0 0 32 32"
           width="18"
           xmlns="http://www.w3.org/2000/svg"
@@ -81,8 +87,10 @@ exports[`Index should match snapshot 1`] = `
         title="Consulter mon GitHub"
       >
         <svg
+          aria-label="github"
           class="align-top margin-right"
           height="18"
+          role="img"
           viewBox="0 0 32 32"
           width="18"
           xmlns="http://www.w3.org/2000/svg"
@@ -107,8 +115,10 @@ exports[`Index should match snapshot 1`] = `
           class="section-title"
         >
           <svg
+            aria-label="arrow"
             class="align-top margin-right"
             height="22"
+            role="img"
             viewBox="0 0 32 32"
             width="22"
             xmlns="http://www.w3.org/2000/svg"
@@ -183,8 +193,10 @@ exports[`Index should match snapshot 1`] = `
               2017
                
               <svg
+                aria-label="arrow"
                 class="align-top"
                 height="12"
+                role="img"
                 viewBox="0 0 32 32"
                 width="12"
                 xmlns="http://www.w3.org/2000/svg"
@@ -230,8 +242,10 @@ exports[`Index should match snapshot 1`] = `
               2012
                
               <svg
+                aria-label="arrow"
                 class="align-top"
                 height="12"
+                role="img"
                 viewBox="0 0 32 32"
                 width="12"
                 xmlns="http://www.w3.org/2000/svg"
@@ -277,8 +291,10 @@ exports[`Index should match snapshot 1`] = `
               2010
                
               <svg
+                aria-label="arrow"
                 class="align-top"
                 height="12"
+                role="img"
                 viewBox="0 0 32 32"
                 width="12"
                 xmlns="http://www.w3.org/2000/svg"
@@ -327,8 +343,10 @@ exports[`Index should match snapshot 1`] = `
               2009
                
               <svg
+                aria-label="arrow"
                 class="align-top"
                 height="12"
+                role="img"
                 viewBox="0 0 32 32"
                 width="12"
                 xmlns="http://www.w3.org/2000/svg"
@@ -389,7 +407,9 @@ exports[`Index should match snapshot 1`] = `
                 class="education-icon"
               >
                 <svg
+                  aria-label="school"
                   height="64"
+                  role="img"
                   viewBox="0 0 32 32"
                   width="64"
                   xmlns="http://www.w3.org/2000/svg"
@@ -406,8 +426,10 @@ exports[`Index should match snapshot 1`] = `
                 2010
                  
                 <svg
+                  aria-label="arrow"
                   class="align-top"
                   height="12"
+                  role="img"
                   viewBox="0 0 32 32"
                   width="12"
                   xmlns="http://www.w3.org/2000/svg"
@@ -438,7 +460,9 @@ exports[`Index should match snapshot 1`] = `
                 class="education-icon"
               >
                 <svg
+                  aria-label="school"
                   height="64"
+                  role="img"
                   viewBox="0 0 32 32"
                   width="64"
                   xmlns="http://www.w3.org/2000/svg"
@@ -455,8 +479,10 @@ exports[`Index should match snapshot 1`] = `
                 2007
                  
                 <svg
+                  aria-label="arrow"
                   class="align-top"
                   height="12"
+                  role="img"
                   viewBox="0 0 32 32"
                   width="12"
                   xmlns="http://www.w3.org/2000/svg"
@@ -486,7 +512,9 @@ exports[`Index should match snapshot 1`] = `
           class="resume"
         >
           <svg
+            aria-label="file"
             height="44"
+            role="img"
             viewBox="0 0 32 32"
             width="44"
             xmlns="http://www.w3.org/2000/svg"
@@ -530,7 +558,9 @@ exports[`Index should match snapshot 1`] = `
             class="interest"
           >
             <svg
+              aria-label="bicycle"
               height="44"
+              role="img"
               viewBox="0 0 32 32"
               width="44"
               xmlns="http://www.w3.org/2000/svg"
@@ -550,7 +580,9 @@ exports[`Index should match snapshot 1`] = `
             class="interest"
           >
             <svg
+              aria-label="roller"
               height="44"
+              role="img"
               viewBox="0 0 32 32"
               width="44"
               xmlns="http://www.w3.org/2000/svg"
@@ -570,7 +602,9 @@ exports[`Index should match snapshot 1`] = `
             class="interest"
           >
             <svg
+              aria-label="tennis"
               height="44"
+              role="img"
               viewBox="0 0 32 32"
               width="44"
               xmlns="http://www.w3.org/2000/svg"
@@ -590,7 +624,9 @@ exports[`Index should match snapshot 1`] = `
             class="interest"
           >
             <svg
+              aria-label="cooking"
               height="44"
+              role="img"
               viewBox="0 0 32 32"
               width="44"
               xmlns="http://www.w3.org/2000/svg"
@@ -610,7 +646,9 @@ exports[`Index should match snapshot 1`] = `
             class="interest"
           >
             <svg
+              aria-label="music"
               height="44"
+              role="img"
               viewBox="0 0 32 32"
               width="44"
               xmlns="http://www.w3.org/2000/svg"
@@ -630,7 +668,9 @@ exports[`Index should match snapshot 1`] = `
             class="interest"
           >
             <svg
+              aria-label="map"
               height="44"
+              role="img"
               viewBox="0 0 32 32"
               width="44"
               xmlns="http://www.w3.org/2000/svg"
@@ -652,7 +692,7 @@ exports[`Index should match snapshot 1`] = `
   </main>
   <footer>
     © 
-    2025
+    2026
      Simon Robin | Design by
      
     <a
