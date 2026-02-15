@@ -9,7 +9,7 @@
     "url": "git+https://github.com/simrobin/about.git"
   },
   "homepage": "https://simrobin.fr",
-  "packageManager": "pnpm@10.25.0",
+  "packageManager": "pnpm@10.29.3",
   "engines": {
     "node": "=22",
     "pnpm": "=10"
@@ -22,27 +22,27 @@
     "lint": "biome check --fix src/",
     "lint:file": "biome check --fix",
     "format": "biome format --write src/",
-    "test": "vitest",
+    "test": "playwright test",
+    "test:ci": "playwright test",
+    "test:update": "playwright test --update-snapshots",
     "typecheck": "astro check",
-    "test:ci": "vitest run",
     "prepare": "panda codegen --clean"
   },
   "dependencies": {
-    "@fontsource-variable/montserrat": "^5.1.0",
-    "astro": "^5.7.0",
-    "astro-icon": "^1.1.0",
+    "@fontsource-variable/montserrat": "^5.2.8",
+    "astro": "^5.17.2",
+    "astro-icon": "^1.1.5",
     "sharp": "0.34.5"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.6",
-    "@biomejs/biome": "2.3.14",
-    "@iconify-json/lucide": "^1.2.0",
-    "@iconify-json/simple-icons": "^1.2.0",
-    "@pandacss/dev": "^1.2.0",
-    "@pandacss/postcss": "^1.2.0",
-    "cheerio": "^1.0.0",
-    "typescript": "5.9.3",
-    "vitest": "^3.0.0"
+    "@biomejs/biome": "2.4.0",
+    "@iconify-json/lucide": "^1.2.90",
+    "@iconify-json/simple-icons": "^1.2.70",
+    "@pandacss/dev": "^1.8.2",
+    "@pandacss/postcss": "^1.8.2",
+    "@playwright/test": "1.58.2",
+    "typescript": "5.9.3"
   },
   "license": "ISC"
 }

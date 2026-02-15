@@ -13,8 +13,8 @@ Personal portfolio/CV website for Simon Robin (simrobin.fr). Content is in Frenc
 - **Preview:** `pnpm preview`
 - **Lint & format:** `pnpm lint` (runs biome check --fix on src/)
 - **Format only:** `pnpm format` (runs biome format --write on src/)
-- **Tests (watch):** `pnpm test`
-- **Tests (CI/single run):** `pnpm test:ci`
+- **Tests:** `pnpm test` (Playwright E2E)
+- **Update snapshots:** `pnpm test:update` (after intentional visual changes)
 - **Panda codegen:** `pnpm prepare` (runs automatically after install)
 
 ## Tech Stack
@@ -24,7 +24,7 @@ Personal portfolio/CV website for Simon Robin (simrobin.fr). Content is in Frenc
 - **astro-icon** + Iconify for icons (local SVGs in `src/icons/`, standard icons from `simple-icons` and `lucide`)
 - **Fontsource** for self-hosted Montserrat variable font
 - **pnpm** package manager (pnpm@10, Node 22)
-- **Vitest** + Astro Container API for component tests
+- **Playwright** for E2E tests and visual regression detection
 - **Biome** for linting and formatting
 
 ## Architecture
