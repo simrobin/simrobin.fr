@@ -1,0 +1,9 @@
+order: 1
+startDate: '2017'
+endDate: "Aujourd'hui"
+title: Développeur front-end
+location: MeilleursAgents | Paris
+missions:
+  - Développement et maintenance des fonctionnalités du site web
+  - Conception d'outils en ligne pour les particuliers et les agences
+  - Maintien en condition opérationnelle de la stack front

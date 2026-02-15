@@ -1,5 +1,3 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
 # dependencies
 /node_modules
 /.pnp
@@ -7,10 +5,15 @@
 
 # testing
 /coverage
+/test-results/
+/playwright-report/
 
-# next.js
-/.next/
-/out/
+# astro
+/.astro/
+/dist/
+
+# panda css
+/styled-system/
 
 # production
 /build

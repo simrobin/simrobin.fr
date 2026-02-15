@@ -1,0 +1,31 @@
+---
+import { css } from '../../styled-system/css';
+
+const currentYear = new Date().getFullYear();
+
+const footerStyle = css({
+  borderBottomStyle: 'solid',
+  borderBottomWidth: '1em',
+  borderBottomColor: 'yellow',
+  fontSize: '1.2em',
+  padding: '3em 8%',
+  textAlign: 'center',
+});
+
+const linkStyle = css({
+  color: 'inherit',
+});
+---
+
+<footer class={footerStyle}>
+  &copy; {currentYear} Simon Robin | Design by{' '}
+  <a
+    href="https://www.elodiearete.fr"
+    title="Site web d'Elodie Arete"
+    target="_blank"
+    rel="noopener noreferrer"
+    class={linkStyle}
+  >
+    Elodie Arete
+  </a>
+</footer>

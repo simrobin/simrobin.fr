@@ -1,0 +1,102 @@
+---
+import { Icon } from 'astro-icon/components';
+import { css } from '../../styled-system/css';
+
+interface Props {
+  startDate: string;
+  endDate: string;
+  title: string;
+  location: string;
+  missions: string[];
+  isFirst?: boolean;
+}
+
+const { startDate, endDate, title, location, missions, isFirst = false } = Astro.props;
+
+const itemStyle = css({
+  position: 'relative',
+  borderColor: 'yellow',
+  borderLeftStyle: { base: 'solid', lg: 'none' },
+  borderLeftWidth: { base: '0.5em', lg: '0' },
+  borderTopStyle: { base: 'none', lg: 'solid' },
+  borderTopWidth: { base: '0', lg: '0.5em' },
+  padding: { base: '0 1.5em 1em', lg: '1em 0.75em' },
+  lg: {
+    flexBasis: '33.333%',
+  },
+  _before: {
+    content: '""',
+    display: 'block',
+    position: 'absolute',
+    backgroundColor: 'yellow',
+    borderRadius: '100%',
+    borderStyle: 'solid',
+    borderWidth: '0.4em',
+    borderColor: { base: 'bg.section', _dark: '#222222' },
+    height: '1.75em',
+    width: '1.75em',
+    left: { base: '-1.15em', lg: '0' },
+    top: { base: '0', lg: '-1.15em' },
+  },
+});
+
+const notFirstStyle = css({
+  paddingTop: { base: '1.5rem', lg: '1em' },
+  _before: {
+    top: { base: '1.5rem', lg: '-1.15em' },
+  },
+});
+
+const dateStyle = css({
+  backgroundColor: 'yellow',
+  display: 'inline-block',
+  fontSize: '1.2em',
+  padding: '0.75em 1em',
+  textTransform: 'uppercase',
+  color: 'gray',
+  marginTop: { base: '-0.5rem', lg: '0' },
+});
+
+const arrowStyle = css({
+  display: 'inline-block',
+  verticalAlign: 'top',
+  color: 'gray',
+});
+
+const titleStyle = css({
+  fontSize: '1.4em',
+  marginTop: '1.5em',
+  textTransform: 'uppercase',
+});
+
+const locationStyle = css({
+  fontSize: '1.4em',
+  fontWeight: 'light',
+  marginTop: '0.5em',
+});
+
+const missionsStyle = css({
+  fontSize: '1.2em',
+  lineHeight: '1.2em',
+  marginTop: '1.5em',
+});
+
+const missionItemStyle = css({
+  '& + &': {
+    marginTop: '0.5em',
+  },
+});
+---
+
+<div class={`${itemStyle}${isFirst ? '' : ` ${notFirstStyle}`}`}>
+  <div class={dateStyle}>
+    {startDate} <Icon name="arrow" size={12} class={arrowStyle} /> {endDate}
+  </div>
+  <div class={titleStyle}>{title}</div>
+  <div class={locationStyle}>{location}</div>
+  <ul class={missionsStyle}>
+    {missions.map((mission) => (
+      <li class={missionItemStyle}>{mission}</li>
+    ))}
+  </ul>
+</div>

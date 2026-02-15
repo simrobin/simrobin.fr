@@ -1,0 +1,10 @@
+order: 3
+startDate: '2010'
+endDate: '2012'
+title: Développeur front-end
+location: AXA France | Nanterre
+missions:
+  - Mise en place d'une API de géolocalisation pour la recherche des distributeurs
+  - Amélioration continue de la compatibilité entre navigateurs et devices
+  - Suivi de projet sur le lancement et la refonte de sites grands publics
+  - Étude technique sur le choix d'un nouveau CMS
