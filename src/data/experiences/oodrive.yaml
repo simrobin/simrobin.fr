@@ -1,0 +1,9 @@
+order: 2
+startDate: '2012'
+endDate: '2017'
+title: Développeur web
+location: Oodrive | Paris
+missions:
+  - Développement d'applications pour la gestion de certificats personnels
+  - Intégration des sites web de l'entreprise
+  - Automatisation de la personnalisation client des applications de partage

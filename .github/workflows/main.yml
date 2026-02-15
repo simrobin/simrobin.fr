@@ -11,28 +11,32 @@ jobs:
   continuous_integration:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Setup Node.js ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      - name: pnpm
+      - name: Install pnpm
         run: npm install -g pnpm --registry=https://registry.npmjs.org
 
       - name: Get pnpm cache directory
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/.local/share/pnpm/store
           key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - name: Install app dependencies
+
+      - name: Install dependencies
         run: pnpm install
 
-      - name: Lint app files
+      - name: Lint
         run: pnpm run lint
 
-      - name: Build app
+      - name: Test
+        run: pnpm run test:ci
+
+      - name: Build
         run: pnpm run build

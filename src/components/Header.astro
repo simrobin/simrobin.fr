@@ -1,0 +1,105 @@
+---
+import { Icon } from 'astro-icon/components';
+import { css } from '../../styled-system/css';
+import ThemeToggle from './ThemeToggle.astro';
+
+const headerStyle = css({
+  backgroundColor: 'bg.header',
+  color: 'white',
+  padding: '8em 8%',
+  textAlign: 'center',
+  width: '100%',
+  position: 'relative',
+});
+
+const titleStyle = css({
+  marginTop: '3em',
+});
+
+const titleNameStyle = css({
+  display: 'block',
+  fontSize: '3.5em',
+  fontWeight: 'bold',
+  textTransform: 'uppercase',
+});
+
+const titleJobStyle = css({
+  display: 'block',
+  fontSize: '3em',
+  fontWeight: 'light',
+  marginTop: '0.5em',
+  textTransform: 'uppercase',
+});
+
+const contactStyle = css({
+  display: 'flex',
+  flexDirection: { base: 'column', sm: 'row' },
+  justifyContent: 'space-between',
+  gap: { base: '1em', sm: '0' },
+  margin: '4em auto 0',
+  maxWidth: '420px',
+});
+
+const contactLinkStyle = css({
+  color: 'white',
+  fontSize: '1.6em',
+  textAlign: 'center',
+  textDecoration: 'none',
+});
+
+const iconInlineStyle = css({
+  display: 'inline-block',
+  verticalAlign: 'top',
+  marginRight: '0.4rem',
+  color: 'yellow',
+});
+
+const themeToggleWrapperStyle = css({
+  position: 'absolute',
+  top: '1em',
+  right: '1em',
+});
+---
+
+<header class={headerStyle}>
+  <div class={themeToggleWrapperStyle}>
+    <ThemeToggle />
+  </div>
+
+  <Icon name="logo" size={64} class={css({ color: 'white', display: 'inline-block' })} />
+
+  <h1 class={titleStyle}>
+    <strong class={titleNameStyle}>Simon Robin</strong>
+    <em class={titleJobStyle}>Développeur Front&#8209;End</em>
+  </h1>
+
+  <div class={contactStyle}>
+    <a
+      class={contactLinkStyle}
+      href="mailto:simon@simrobin.fr"
+      title="M'envoyer un message"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Icon name="lucide:mail" size={18} class={iconInlineStyle} /> Message
+    </a>
+    <a
+      class={contactLinkStyle}
+      href="https://twitter.com/simrobins"
+      title="Me suivre sur Twitter"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Icon name="simple-icons:x" size={18} class={iconInlineStyle} /> Twitter
+    </a>
+    <a
+      class={contactLinkStyle}
+      href="https://github.com/simrobin"
+      title="Consulter mon GitHub"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Icon name="simple-icons:github" size={18} class={iconInlineStyle} /> GitHub
+    </a>
+  </div>
+</header>
