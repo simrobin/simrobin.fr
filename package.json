@@ -38,7 +38,7 @@
     "@astrojs/check": "0.9.6",
     "@biomejs/biome": "2.4.0",
     "@iconify-json/lucide": "^1.2.90",
-    "@iconify-json/simple-icons": "^1.2.70",
+    "@iconify-json/simple-icons": "^1.2.71",
     "@pandacss/dev": "^1.8.2",
     "@pandacss/postcss": "^1.8.2",
     "@playwright/test": "1.58.2",
