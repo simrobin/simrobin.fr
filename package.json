@@ -45,6 +45,7 @@
     "typescript": "5.9.3"
   },
   "pnpm": {
+    "onlyBuiltDependencies": ["esbuild", "sharp"],
     "overrides": {
       "picomatch@>=4.0.0 <4.0.4": "4.0.4",
       "yaml@>=2.0.0 <2.8.3": "2.8.3",
