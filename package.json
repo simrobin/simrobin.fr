@@ -39,9 +39,9 @@
     "@biomejs/biome": "2.4.10",
     "@iconify-json/lucide": "^1.2.100",
     "@iconify-json/simple-icons": "^1.2.75",
-    "@pandacss/dev": "^1.9.1",
-    "@pandacss/postcss": "^1.9.1",
-    "@playwright/test": "1.58.2",
+    "@pandacss/dev": "^1.10.0",
+    "@pandacss/postcss": "^1.10.0",
+    "@playwright/test": "1.59.1",
     "typescript": "5.9.3"
   },
   "pnpm": {
