@@ -35,13 +35,13 @@
     "sharp": "0.34.5"
   },
   "devDependencies": {
-    "@astrojs/check": "0.9.8",
-    "@biomejs/biome": "2.4.10",
+    "@astrojs/check": "0.9.9",
+    "@biomejs/biome": "2.4.15",
     "@iconify-json/lucide": "^1.2.100",
     "@iconify-json/simple-icons": "^1.2.75",
-    "@pandacss/dev": "^1.10.0",
-    "@pandacss/postcss": "^1.10.0",
-    "@playwright/test": "1.59.1",
+    "@pandacss/dev": "^1.11.1",
+    "@pandacss/postcss": "^1.11.1",
+    "@playwright/test": "1.60.0",
     "typescript": "5.9.3"
   },
   "pnpm": {
