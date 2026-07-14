@@ -32,16 +32,16 @@
     "@fontsource-variable/montserrat": "^5.2.8",
     "astro": "^6.4.6",
     "astro-icon": "^1.1.5",
-    "sharp": "0.34.5"
+    "sharp": "0.35.3"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.9",
     "@biomejs/biome": "2.4.15",
     "@iconify-json/lucide": "^1.2.100",
     "@iconify-json/simple-icons": "^1.2.86",
-    "@pandacss/dev": "^1.11.3",
-    "@pandacss/postcss": "^1.11.3",
-    "@playwright/test": "1.60.0",
+    "@pandacss/dev": "^1.11.4",
+    "@pandacss/postcss": "^1.11.4",
+    "@playwright/test": "1.61.1",
     "typescript": "5.9.3"
   },
   "pnpm": {
