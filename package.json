@@ -17,7 +17,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "panda codegen && astro build",
     "preview": "astro preview",
     "lint": "biome check --fix src/",
     "lint:file": "biome check --fix",
