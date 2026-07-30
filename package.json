@@ -9,10 +9,10 @@
     "url": "git+https://github.com/simrobin/about.git"
   },
   "homepage": "https://simrobin.fr",
-  "packageManager": "pnpm@10.29.3",
+  "packageManager": "pnpm@11.16.0",
   "engines": {
     "node": "=24",
-    "pnpm": "=10"
+    "pnpm": "=11"
   },
   "scripts": {
     "dev": "astro dev",
@@ -43,15 +43,6 @@
     "@pandacss/postcss": "^1.11.3",
     "@playwright/test": "1.60.0",
     "typescript": "6.0.3"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": ["esbuild", "sharp"],
-    "overrides": {
-      "picomatch@>=4.0.0 <4.0.4": "4.0.4",
-      "yaml@>=2.0.0 <2.8.3": "2.8.3",
-      "tar": ">=7.5.11",
-      "undici": ">=7.24.0"
-    }
   },
   "license": "ISC"
 }
