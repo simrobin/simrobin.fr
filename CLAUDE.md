@@ -9,13 +9,15 @@ Personal portfolio/CV website for Simon Robin (simrobin.fr). Content is in Frenc
 ## Commands
 
 - **Dev server:** `pnpm start` or `pnpm dev`
-- **Build:** `pnpm build`
+- **Build:** `pnpm build` (runs `panda codegen` first, see below)
 - **Preview:** `pnpm preview`
 - **Lint & format:** `pnpm lint` (runs biome check --fix on src/)
 - **Format only:** `pnpm format` (runs biome format --write on src/)
 - **Tests:** `pnpm test` (Playwright E2E)
 - **Update snapshots:** `pnpm test:update` (after intentional visual changes)
-- **Panda codegen:** `pnpm prepare` (runs automatically after install)
+- **Panda codegen:** `pnpm prepare` (also runs after a fresh install)
+
+`styled-system/` is gitignored, so `build` regenerates it rather than trusting `prepare` to have run. pnpm 11 skips lifecycle scripts when an install has nothing to do, and Vercel restores `node_modules` from its build cache : without this, any commit that changes neither `package.json` nor the lockfile deploys with `styled-system/` missing and fails to resolve `../../styled-system/css`.
 
 ## Tech Stack
 
