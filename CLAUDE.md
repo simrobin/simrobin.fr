@@ -19,11 +19,11 @@ Personal portfolio/CV website for Simon Robin (simrobin.fr). Content is in Frenc
 
 ## Tech Stack
 
-- **Astro 5** with static output, TypeScript strict
+- **Astro 7** with static output, TypeScript strict
 - **Panda CSS** for zero-runtime atomic styling with design tokens and semantic tokens (dark mode)
 - **astro-icon** + Iconify for icons (local SVGs in `src/icons/`, standard icons from `simple-icons` and `lucide`)
 - **Fontsource** for self-hosted Montserrat variable font
-- **pnpm** package manager (pnpm@10, Node 22)
+- **pnpm** package manager (pnpm@11, Node 24)
 - **Playwright** for E2E tests and visual regression detection
 - **Biome** for linting and formatting
 
@@ -54,6 +54,13 @@ Single-page static site:
 ## Content Collections
 
 Experiences and education are YAML files with Zod schemas. Queried with `getCollection()` and sorted by `order` field.
+
+## Dependency Management
+
+- **pnpm settings live in `pnpm-workspace.yaml`**, not `.npmrc` (removed) or `package.json` : pnpm 11 no longer reads those. This covers `overrides`, `allowBuilds` (replaces `onlyBuiltDependencies`) and `minimumReleaseAge`.
+- **`minimumReleaseAge: 10080`** (7 days) is a supply-chain guard. When pinning any version, pick the newest release published more than 7 days ago (`npm view <pkg> time --json`), never the absolute latest. Never bypass it with `minimumReleaseAgeExclude`.
+- Security overrides are version-scoped (`'undici@<7.28.0': 7.28.0`) rather than open-ended (`undici: '>=7.28.0'`) so a reinstall cannot silently pull a new major.
+- Dependabot runs weekly on Tuesday for both npm and GitHub Actions, grouping minor/patch updates into a single PR.
 
 ## Pre-commit Hook
 
