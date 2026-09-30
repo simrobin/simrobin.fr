@@ -7,6 +7,10 @@ updates:
     schedule:
       interval: weekly
       day: tuesday
+    # Matches minimumReleaseAge in pnpm-workspace.yaml (10080 minutes). Security
+    # updates ignore both, so their PRs can still fail CI on a young transitive.
+    cooldown:
+      default-days: 7
     commit-message:
       prefix: chore
       include: scope
