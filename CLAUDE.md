@@ -62,7 +62,8 @@ Experiences and education are YAML files with Zod schemas. Queried with `getColl
 - **pnpm settings live in `pnpm-workspace.yaml`**, not `.npmrc` (removed) or `package.json` : pnpm 11 no longer reads those. This covers `overrides`, `allowBuilds` (replaces `onlyBuiltDependencies`) and `minimumReleaseAge`.
 - **`minimumReleaseAge: 10080`** (7 days) is a supply-chain guard. When pinning any version, pick the newest release published more than 7 days ago (`npm view <pkg> time --json`), never the absolute latest. Never bypass it with `minimumReleaseAgeExclude`.
 - Security overrides are version-scoped (`'undici@<7.28.0': 7.28.0`) rather than open-ended (`undici: '>=7.28.0'`) so a reinstall cannot silently pull a new major.
-- Dependabot runs weekly on Tuesday for both npm and GitHub Actions, grouping minor/patch updates into a single PR.
+- Dependabot runs weekly on Tuesday for both npm and GitHub Actions, grouping minor/patch updates into a single PR. Its `cooldown` (7 days) mirrors `minimumReleaseAge`.
+- **Dependabot security PRs bypass `minimumReleaseAge`** : they run pnpm with `minimumReleaseAge=0`, so the lockfile can pick up transitive versions younger than 7 days and CI fails with `ERR_PNPM_MINIMUM_RELEASE_AGE_VIOLATION`. Redo the update locally (`pnpm update <pkg>@<version>` respects the policy) rather than waiting or running `@dependabot recreate`.
 
 ## Pre-commit Hook
 
