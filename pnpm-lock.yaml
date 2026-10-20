@@ -27,8 +27,8 @@ importers:
         specifier: ^5.3.0
         version: 5.3.0
       astro:
-        specifier: ^7.3.6
-        version: 7.3.6(@types/node@25.2.0)(sass@1.97.3)(yaml@2.8.3)
+        specifier: ^7.3.8
+        version: 7.3.8(@types/node@25.2.0)(esbuild@0.28.2)(sass@1.97.3)(yaml@2.8.3)
       astro-icon:
         specifier: ^1.2.0
         version: 1.2.0
@@ -43,11 +43,11 @@ importers:
         specifier: 2.5.15
         version: 2.5.15
       '@iconify-json/lucide':
-        specifier: ^1.2.140
-        version: 1.2.140
+        specifier: ^1.2.143
+        version: 1.2.143
       '@iconify-json/simple-icons':
-        specifier: ^1.2.99
-        version: 1.2.99
+        specifier: ^1.2.100
+        version: 1.2.100
       '@pandacss/dev':
         specifier: ^1.12.1
         version: 1.12.1(jsdom@26.1.0)(typescript@6.0.3)
@@ -55,8 +55,8 @@ importers:
         specifier: ^1.12.1
         version: 1.12.1(jsdom@26.1.0)(typescript@6.0.3)
       '@playwright/test':
-        specifier: 1.63.0
-        version: 1.63.0
+        specifier: 1.64.0
+        version: 1.64.0
       typescript:
         specifier: 6.0.3
         version: 6.0.3
@@ -719,11 +719,11 @@ packages:
   '@fontsource-variable/montserrat@5.3.0':
     resolution: {integrity: sha512-7PaZoxaxrWLAyrhO46v65An9LhUhfkTExWLhfbywYZCnZEgg/W1rEHnlNmZKjNZ3nJTVYyicqxlJt10z/26yTA==}
 
-  '@iconify-json/lucide@1.2.140':
-    resolution: {integrity: sha512-/br6j8K8IFcZscs7gJ20PWaaonQeA4jcGK0Bdt+4EDra2Zbtpb36RGaGOJr5opz6zJtXaZdMCYCXa0dN/y4c0g==}
+  '@iconify-json/lucide@1.2.143':
+    resolution: {integrity: sha512-YSggiBVmSY5IvLoKS5pUBoNYkon5g5bac0/JvYCIaFbhTfsTfkIHG2nCXWSk03tu5C4IEmyZ4qwfwbO9CXqLag==}
 
-  '@iconify-json/simple-icons@1.2.99':
-    resolution: {integrity: sha512-kouZhqvUoNdxEe+lZksbJJZMCZv4b4Ob62O1GW3fcpz/I0mVPzM+9/Qf/DUuv5ns8l6c46D8M/ubhJjjbLp9HQ==}
+  '@iconify-json/simple-icons@1.2.100':
+    resolution: {integrity: sha512-536pN2RCEQyy5bYwzayrs4e9egr8cmtVcbdSHLaQl/ULUsihzn1eZ0+Hhn50zgz9cbEotiynKsKQSEjFJ7qKmw==}
 
   '@iconify/tools@5.0.14':
     resolution: {integrity: sha512-wJ4ZE3/HZh2iBqLwG+8FOMHe7CMJAJqwSXZSpPwMdj1gZM3Z4t2hbQMVw4Vm45oQ985qn0g89PUIcDEdKTheBA==}
@@ -1090,8 +1090,8 @@ packages:
     resolution: {integrity: sha512-7FNeNl8NCE7aINx7WXiKQrPYZWC/hvrTsmk6zmxbI7LTXE7hVek/n8AfVgpe2y82zl3w0HvCHN0bVKMBoJcC0w==}
     engines: {node: '>= 10.0.0'}
 
-  '@playwright/test@1.63.0':
-    resolution: {integrity: sha512-oxMK4vllB9RK5NQ2l1pq1IfOf2AvnEuj/vYGDj0H2nMtmtZpKtCwt/l00GEO6xjGfpBNAvjovvYdCm50dRQkpQ==}
+  '@playwright/test@1.64.0':
+    resolution: {integrity: sha512-oTN9FNYuN6bqQMwiho6jJKLCG2/QOYCixGXuCjRmzOq23eODeukuY2XiAVoVpAECbuezMt1MHQjAiQxK8F+Y+g==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -1359,8 +1359,8 @@ packages:
     resolution: {integrity: sha512-0848V2WZuTPhqGSqLeZimLJZ5wmamMtWYzvA2kvg8s2DrUPZ3/nrTcHJWN0eJHt62jy7uvNxgTNiUJGIr7JNxg==}
     engines: {node: '>=22.12.0'}
 
-  astro@7.3.6:
-    resolution: {integrity: sha512-3q0MKxfE4cpr5IoQ9EWrN0gwxeT5tkCaSVe3SrGlLR5fnTIywHqjVqFokQkQiZexfwpNtB9dtBdUcXV9FuD+4w==}
+  astro@7.3.8:
+    resolution: {integrity: sha512-LHzDHSaV+YzZiR3EFndDYTLLeNeuMtP1qX1FLcCNUUHOCqTTIWPczy2UV3zpA5VqvJe5cWZolqM9Z8JFqR2i9w==}
     engines: {node: '>=22.12.0', npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
     peerDependencies:
@@ -2096,8 +2096,8 @@ packages:
     resolution: {integrity: sha512-SKgVvDU5TNIxQ4r30U75BNLC6a+6GOEjngrk/ysM5+Zu3oJuk1SC5ApzIzY/7PjCEjoVPMWJ0zho/4QUiEB7TQ==}
     engines: {node: '>=20'}
 
-  p-queue@9.3.3:
-    resolution: {integrity: sha512-NXAOdnEe5FsZJfT4oK84lE1Y5cFFdWlRuOo5tww8DyNMxyRXwn39fIkUtNLKppcPC+UYU/bXujNCUGDv01y7CA==}
+  p-queue@9.3.5:
+    resolution: {integrity: sha512-Lki/zhXFVmDhesBUn/yHRLW9Bte7mE7xoFHzTR8sIomV7a2z+LxYAPkGvdfidNiu4fKSfjtawixxSHcZci5QcQ==}
     engines: {node: '>=20'}
 
   p-timeout@7.0.2:
@@ -2143,13 +2143,13 @@ packages:
   pkg-types@2.3.0:
     resolution: {integrity: sha512-SIqCzDRg0s9npO5XQ3tNZioRY1uK06lA41ynBC1YmFTmnY6FjUjVt6s4LoADmwoig1qqD0oK8h1p/8mlMx8Oig==}
 
-  playwright-core@1.63.0:
-    resolution: {integrity: sha512-rYCsBF/M5HjUch52bbtVONEFjv6Xu8sm8h72dNlR5bzIE1fvC/bxgspzkjSfU+MweEMmPM8KJebG6nnyxo5mCg==}
+  playwright-core@1.64.0:
+    resolution: {integrity: sha512-T9r+MZkTECl2+oUcZ26YgZzTrYidTsIhYYkJix+6iDOymOb1FB2RLLSOxRGnZGv5DStt+aduIVbt+E8WygXYpg==}
     engines: {node: '>=20'}
     hasBin: true
 
-  playwright@1.63.0:
-    resolution: {integrity: sha512-+7ziBLidS4NaNCdt57SUDT+wYmmd5fmiQejUic/kb+YsYSCPyOOE9sebzMjNmQrsnNpDJqd4WHvV/8lfKfUDUg==}
+  playwright@1.64.0:
+    resolution: {integrity: sha512-kVzTnYFYEyQ9RGzBjNCd2+yEqWmVbxl3AHPynv3qQ6JTjv4a+kwRcnqQwIpuP3NnrnIrE/Q6wWAIAvMfIE2/Yg==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -2202,8 +2202,8 @@ packages:
     resolution: {integrity: sha512-xdB1oSLHbz1vRWgCDalrCqEFTWzFlhqFC5tIHLMOSUIjhm3XXQ1qrFy8S/ESr1JYRRXqM3c1QFiMZUJdUTqyMQ==}
     engines: {node: ^10 || ^12 || >=14}
 
-  postcss@8.5.29:
-    resolution: {integrity: sha512-49cGhUbXj8Qenv0iTMxA1cFBzxXoctpC9Ujd77t1WcbJIr6nF/eI7g/8MgxrYldFRuAXvja7xQRwavoW7kgrxQ==}
+  postcss@8.5.30:
+    resolution: {integrity: sha512-zkd+e9S1AQHhmaBKye9zlFHWjOwVgqXl1q3ECYy8561K7qxR2cREf/STLskulBFd78k6AOFeA+ff1TtEzk9bAA==}
     engines: {node: ^10 || ^12 || >=14}
 
   prettier@3.2.5:
@@ -2329,8 +2329,8 @@ packages:
     resolution: {integrity: sha512-qMCMfhY040cVHT43K9BFygqYbUPFZKHOg7K73mtTWJRb8pyP3fzf4Ixd5SzdEJQ6MRUg/WBnOLxghZtKKurENQ==}
     engines: {node: '>=10'}
 
-  smol-toml@1.9.0:
-    resolution: {integrity: sha512-hpd+HLON7HdZXqYchMM/+LaTTbdK0AU3NngIJ4KVyWbY9bfQqdL9cD+4yf6dUoU2Ap4VsU0JkQi6FxAI1B2mXQ==}
+  smol-toml@1.9.1:
+    resolution: {integrity: sha512-j7WyPdf0CJoutMzMoPLF/bVXHtKZIT9Rb4eGeEbWw8X2t5oirjPgpL+OpaENZrILYaXqYwnVH+qgUwVbl+pUJQ==}
     engines: {node: '>= 18'}
 
   source-map-js@1.2.1:
@@ -2576,8 +2576,8 @@ packages:
   vfile@6.0.3:
     resolution: {integrity: sha512-KzIbH/9tXat2u30jf+smMwFCsno4wHVdNmzFyL+T/L3UGqqk6JKfVqOFOZEpZSHADH1k40ab6NUIXZq422ov3Q==}
 
-  vite@8.3.3:
-    resolution: {integrity: sha512-cTAldKPImjg6c+gk48U19POPn3GCBzZwpdsN8ZMEEcbpes+6/wvfqUd0C2y3qYY4wsj8PwgFwrZ/1jBPVttMSg==}
+  vite@8.3.4:
+    resolution: {integrity: sha512-IftLE8phJhdNRIGNEV4JCCvfNScoZQVfcXaN8TQropWGJtOHcu+iAB9pHcuGvmEb/kddw0LBe/jS8ztdC6xdiQ==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -2810,8 +2810,8 @@ packages:
     resolution: {integrity: sha512-4LCcse/U2MHZ63HAJVE+v71o7yOdIe4cZ70Wpf8D/IyjDKYQLV5GD46B+hSTjJsvV5PztjvHoU580EftxjDZFQ==}
     engines: {node: '>=12.20'}
 
-  zod@4.6.5:
-    resolution: {integrity: sha512-v5l/aFXZQeai4awLbOpSoHecE9UiMrnfx75tEXLjNonXVARxQ5mOeipTjROUchszUNCqnE+hqAMujRsRHsut2Q==}
+  zod@4.6.7:
+    resolution: {integrity: sha512-g8W2D2kU6a8untc053fX1uVBKzM7yqAxW/3zwk83+6RyF2+SKOuV+c0wBDhUwzV1PaGapmZH+rmcUzPf+3CGwg==}
 
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
@@ -2909,7 +2909,7 @@ snapshots:
       picomatch: 4.0.7
       retext-smartypants: 6.2.0
       shiki: 4.5.0
-      smol-toml: 1.9.0
+      smol-toml: 1.9.1
       unified: 11.0.5
       yaml: 2.9.1
 
@@ -3316,11 +3316,11 @@ snapshots:
 
   '@fontsource-variable/montserrat@5.3.0': {}
 
-  '@iconify-json/lucide@1.2.140':
+  '@iconify-json/lucide@1.2.143':
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/simple-icons@1.2.99':
+  '@iconify-json/simple-icons@1.2.100':
     dependencies:
       '@iconify/types': 2.0.0
 
@@ -3731,9 +3731,9 @@ snapshots:
       '@parcel/watcher-win32-x64': 2.6.0
     optional: true
 
-  '@playwright/test@1.63.0':
+  '@playwright/test@1.64.0':
     dependencies:
-      playwright: 1.63.0
+      playwright: 1.64.0
 
   '@rolldown/binding-android-arm-eabi@1.2.13':
     optional: true
@@ -3992,7 +3992,7 @@ snapshots:
       '@iconify/types': 2.0.0
       '@iconify/utils': 3.1.7
 
-  astro@7.3.6(@types/node@25.2.0)(sass@1.97.3)(yaml@2.8.3):
+  astro@7.3.8(@types/node@25.2.0)(esbuild@0.28.2)(sass@1.97.3)(yaml@2.8.3):
     dependencies:
       '@astrojs/compiler-rs': 0.5.1
       '@astrojs/internal-helpers': 0.12.0
@@ -4012,7 +4012,6 @@ snapshots:
       diff: 9.0.0
       dset: 3.1.4
       es-module-lexer: 3.0.3
-      esbuild: 0.28.2
       find-proc: 0.2.0
       flattie: 1.1.1
       fontace: 0.4.1
@@ -4027,13 +4026,13 @@ snapshots:
       neotraverse: 1.0.1
       obug: 3.0.0
       p-limit: 7.3.3
-      p-queue: 9.3.3
+      p-queue: 9.3.5
       package-manager-detector: 1.9.0
       piccolore: 0.1.3
       picomatch: 4.0.7
       rolldown: 1.2.13
       shiki: 4.5.0
-      smol-toml: 1.9.0
+      smol-toml: 1.9.1
       svgo: 4.1.0
       tinyclip: 1.0.3
       tinyexec: 1.3.1
@@ -4042,11 +4041,11 @@ snapshots:
       unifont: 0.7.5
       unstorage: 1.17.5
       verkit: 0.5.0
-      vite: 8.3.3(@types/node@25.2.0)(esbuild@0.28.2)(sass@1.97.3)(yaml@2.8.3)
-      vitefu: 1.1.3(vite@8.3.3(@types/node@25.2.0)(esbuild@0.28.2)(sass@1.97.3)(yaml@2.8.3))
+      vite: 8.3.4(@types/node@25.2.0)(esbuild@0.28.2)(sass@1.97.3)(yaml@2.8.3)
+      vitefu: 1.1.3(vite@8.3.4(@types/node@25.2.0)(esbuild@0.28.2)(sass@1.97.3)(yaml@2.8.3))
       xxhash-wasm: 1.1.0
       yargs-parser: 22.0.0
-      zod: 4.6.5
+      zod: 4.6.7
     optionalDependencies:
       sharp: 0.35.5(@types/node@25.2.0)
     transitivePeerDependencies:
@@ -4068,6 +4067,7 @@ snapshots:
       - '@vitejs/devtools'
       - aws4fetch
       - db0
+      - esbuild
       - idb-keyval
       - ioredis
       - jiti
@@ -4320,6 +4320,7 @@ snapshots:
       '@esbuild/win32-arm64': 0.28.2
       '@esbuild/win32-ia32': 0.28.2
       '@esbuild/win32-x64': 0.28.2
+    optional: true
 
   escalade@3.2.0: {}
 
@@ -4778,7 +4779,7 @@ snapshots:
     dependencies:
       yocto-queue: 1.2.2
 
-  p-queue@9.3.3:
+  p-queue@9.3.5:
     dependencies:
       eventemitter3: 5.0.4
       p-timeout: 7.0.2
@@ -4816,11 +4817,11 @@ snapshots:
       exsolve: 1.1.1
       pathe: 2.0.3
 
-  playwright-core@1.63.0: {}
+  playwright-core@1.64.0: {}
 
-  playwright@1.63.0:
+  playwright@1.64.0:
     dependencies:
-      playwright-core: 1.63.0
+      playwright-core: 1.64.0
 
   pluralize@8.0.0: {}
 
@@ -4866,7 +4867,7 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  postcss@8.5.29:
+  postcss@8.5.30:
     dependencies:
       nanoid: 3.3.20
       picocolors: 1.1.1
@@ -5037,7 +5038,7 @@ snapshots:
       astral-regex: 2.0.0
       is-fullwidth-code-point: 3.0.0
 
-  smol-toml@1.9.0: {}
+  smol-toml@1.9.1: {}
 
   source-map-js@1.2.1: {}
 
@@ -5244,11 +5245,11 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.3
 
-  vite@8.3.3(@types/node@25.2.0)(esbuild@0.28.2)(sass@1.97.3)(yaml@2.8.3):
+  vite@8.3.4(@types/node@25.2.0)(esbuild@0.28.2)(sass@1.97.3)(yaml@2.8.3):
     dependencies:
       lightningcss: 1.33.0
       picomatch: 4.0.7
-      postcss: 8.5.29
+      postcss: 8.5.30
       rolldown: 1.2.13
       tinyglobby: 0.2.17
     optionalDependencies:
@@ -5258,9 +5259,9 @@ snapshots:
       sass: 1.97.3
       yaml: 2.8.3
 
-  vitefu@1.1.3(vite@8.3.3(@types/node@25.2.0)(esbuild@0.28.2)(sass@1.97.3)(yaml@2.8.3)):
+  vitefu@1.1.3(vite@8.3.4(@types/node@25.2.0)(esbuild@0.28.2)(sass@1.97.3)(yaml@2.8.3)):
     optionalDependencies:
-      vite: 8.3.3(@types/node@25.2.0)(esbuild@0.28.2)(sass@1.97.3)(yaml@2.8.3)
+      vite: 8.3.4(@types/node@25.2.0)(esbuild@0.28.2)(sass@1.97.3)(yaml@2.8.3)
 
   volar-service-css@0.0.71(@volar/language-service@2.4.28):
     dependencies:
@@ -5443,6 +5444,6 @@ snapshots:
 
   yocto-queue@1.2.2: {}
 
-  zod@4.6.5: {}
+  zod@4.6.7: {}
 
   zwitch@2.0.4: {}
