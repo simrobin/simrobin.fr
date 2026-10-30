@@ -30,14 +30,14 @@
   },
   "dependencies": {
     "@fontsource-variable/montserrat": "^5.3.0",
-    "astro": "^7.4.1",
+    "astro": "^7.4.2",
     "astro-icon": "^1.2.0",
     "sharp": "0.35.5"
   },
   "devDependencies": {
-    "@astrojs/check": "0.9.11",
-    "@biomejs/biome": "2.5.15",
-    "@iconify-json/lucide": "^1.2.146",
+    "@astrojs/check": "0.9.12",
+    "@biomejs/biome": "2.6.2",
+    "@iconify-json/lucide": "^1.2.147",
     "@iconify-json/simple-icons": "^1.2.100",
     "@pandacss/dev": "^2.4.0",
     "@pandacss/postcss": "^2.4.0",
