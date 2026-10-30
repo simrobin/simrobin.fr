@@ -15,6 +15,11 @@ updates:
       prefix: chore
       include: scope
     groups:
+      # Packages released in lockstep: one PR per bump, majors included, so they
+      # never land split across PRs that cannot pass CI on their own.
+      pandacss:
+        patterns:
+          - '@pandacss/*'
       minor-and-patch:
         update-types:
           - minor
