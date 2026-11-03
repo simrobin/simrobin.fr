@@ -36,9 +36,9 @@
   },
   "devDependencies": {
     "@astrojs/check": "0.9.12",
-    "@biomejs/biome": "2.6.2",
+    "@biomejs/biome": "2.6.3",
     "@iconify-json/lucide": "^1.2.147",
-    "@iconify-json/simple-icons": "^1.2.100",
+    "@iconify-json/simple-icons": "^1.2.101",
     "@pandacss/dev": "^2.4.0",
     "@pandacss/postcss": "^2.4.0",
     "@pandacss/preset-base": "^2.4.0",
