@@ -30,18 +30,18 @@
   },
   "dependencies": {
     "@fontsource-variable/montserrat": "^5.3.0",
-    "astro": "^7.4.2",
+    "astro": "^7.4.5",
     "astro-icon": "^1.2.0",
     "sharp": "0.35.5"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.12",
-    "@biomejs/biome": "2.6.3",
-    "@iconify-json/lucide": "^1.2.147",
+    "@biomejs/biome": "2.6.4",
+    "@iconify-json/lucide": "^1.2.150",
     "@iconify-json/simple-icons": "^1.2.101",
-    "@pandacss/dev": "^2.4.0",
-    "@pandacss/postcss": "^2.4.0",
-    "@pandacss/preset-base": "^2.4.0",
+    "@pandacss/dev": "^2.5.0",
+    "@pandacss/postcss": "^2.5.0",
+    "@pandacss/preset-base": "^2.5.0",
     "@playwright/test": "1.64.1",
     "typescript": "6.0.3"
   },
